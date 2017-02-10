@@ -1,0 +1,233 @@
+[{
+	"id": "BL",
+	"text": "百丽",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "BL01",
+		"text": "百丽",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": [{
+			"id": "MB01",
+			"text": "卡特",
+			"checked": false,
+			"state": "",
+			"attributes": {},
+			"nodes": null,
+			"code": null
+		}, {
+			"id": "MB02",
+			"text": "迈乐",
+			"checked": false,
+			"state": "",
+			"attributes": {},
+			"nodes": null,
+			"code": null
+		}],
+		"code": null
+	}, {
+		"id": "BL02",
+		"text": "金百丽",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}, {
+		"id": "BL03",
+		"text": "IstBelle",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "BS",
+	"text": "百思图",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "BS01",
+		"text": "百思图",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "BT",
+	"text": "拔佳",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "BT01",
+		"text": "拔佳",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "HP",
+	"text": "暇步士",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "HP01",
+		"text": "暇步士",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "JP",
+	"text": "真美诗",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "JP01",
+		"text": "真美诗",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "MB",
+	"text": "美丽宝",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "MB01",
+		"text": "卡特",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}, {
+		"id": "MB02",
+		"text": "迈乐",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}, {
+		"id": "MB03",
+		"text": "美丽宝",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}, {
+		"id": "MB04",
+		"text": "美丽宝其它",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "ML",
+	"text": "妙丽",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "ML01",
+		"text": "妙丽",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}, {
+		"id": "ML02",
+		"text": "Bcbg",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}, {
+		"id": "ML03",
+		"text": "妙丽其它",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "ST",
+	"text": "思加图",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "ST01",
+		"text": "思加图",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "TM",
+	"text": "天美意",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "TM01",
+		"text": "天美意",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}, {
+	"id": "TT",
+	"text": "他她",
+	"checked": false,
+	"state": "",
+	"attributes": {},
+	"nodes": [{
+		"id": "TT01",
+		"text": "他她",
+		"checked": false,
+		"state": "",
+		"attributes": {},
+		"nodes": null,
+		"code": null
+	}],
+	"code": null
+}]

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="app no-touch">
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.extend.css" type="text/css" />
+</head>
+
+<body class="">
+    <section class="vbox">
+        <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
+            <div class="navbar-header aside-md">
+                <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
+                <a href="index.html" class="navbar-brand"> <img src="http://172.17.210.82/ocp/images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
+                <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user"> <i class="fa fa-cog"></i> </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+                <li class="hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="i i-chat3"></i> <span class="badge badge-sm up bg-danger count">2</span> </a>
+                    <section class="dropdown-menu aside-xl animated flipInY">
+                        <section class="panel bg-white">
+                            <div class="panel-heading b-light bg-light"> <strong>你有<span class="count">2</span> 个新通知</strong> </div>
+                            <div class="list-group list-group-alt">
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
+                                <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0版本发布<br> <small class="text-muted">1小时前</small> </span> </a>
+                            </div>
+                            <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </div>
+                        </section>
+                    </section>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
+                    <ul class="dropdown-menu animated fadeInRight">
+                        <li> <span class="arrow top"></span> <a href="#">系统设置</a> </li>
+                        <li> <a href="#">资料修改</a> </li>
+                        <li>
+                            <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息</a>
+                        </li>
+                        <li> <a href="#">帮助</a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="login.html" data-toggle="ajaxModal">退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <section class="hbox stretch">
+                <!-- .aside -->
+                <aside class="bg-light dker aside-md hidden-print hidden-xs sidebar" id="nav">
+                    <section class="vbox">
+                        <section class="w-f scrollable">
+                            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                                <div class="clearfix wrapper dk nav-user hidden-xs">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="thumb avatar pull-left m-r">
+                                                <img src="http://172.17.210.82/ocp/images/avatar/a0.png" class="dker" alt="..."> 
+                                                <i class="on md b-black"></i>
+                                            </span>
+                                            <span class="hidden-nav-xs clear">
+                                                <span class="block m-t-xs">
+                                                    <strong class="font-bold text-lt">维森莫</strong>
+                                                    <b class="caret"></b>
+                                                </span> 
+                                                <span class="text-muted text-xs block">超级管理员</span>
+                                            </span>
+                                        </a>
+                                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                            <li> <span class="arrow top hidden-nav-xs"></span> <a href="#">系统设置</a> </li>
+                                            <li> <a href="#">资料修改</a> </li>
+                                            <li>
+                                                <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息 </a>
+                                            </li>
+                                            <li> <a href="#">帮助</a> </li>
+                                            <li class="divider"></li>
+                                            <li> <a href="login.html" data-toggle="ajaxModal">退出</a> </li>
+                                        </ul>
+                                    </div>
+                                </div><!-- user -->
+                                <nav id="sideNav" class="nav-primary hidden-xs">
+                                </nav><!-- nav -->
+                            </div>
+                        </section>
+                        <footer class="footer hidden-xs no-padder dk text-center-nav-xs">
+                            <a rel="tooltip" title="退出" href="login.html" data-toggle="ajaxModal" class="btn btn-icon btn-inactive text-black pull-right m-l-xs m-r-xs hidden-nav-xs"> <i class="i i-logout"></i> </a>
+                            <a id="sideNavSwitch" rel="tooltip" title="收缩" href="#nav" data-toggle="class:nav-xs" class="btn btn-icon btn-inactive text-black m-l-xs m-r-xs"> <i class="i i-circleleft text"></i> <i class="i i-circleright text-active"></i> </a>
+                        </footer>
+                    </section>
+                </aside>
+                <!-- /.aside -->
+                <section id="content">
+                    <section class="vbox">
+                        <!-- <header class="header bg-light dk b-b b-light">
+                            <h3 class="m-t-none m-b-none padder-v">品牌分类管理</h3>
+                        </header> -->
+                        <header class="header text-right b-b clearfix padder">
+                            <p class="h3 pull-left">
+                                品牌分类管理
+                            </p>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#categoryModal">新建</button>
+                        </header>
+                        <section>
+                            <section class="hbox stretch">
+                                <aside class="bg-light lter b-r aside-md">
+                                    <section class="vbox">
+                                        <header class="header text-right clearfix">
+                                            <p class="h4 font-thin pull-left m-r-sm m-b-sm">所有品牌</p>
+                                            <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#categoryModal"><i class="fa fa-plus"></i></button>
+                                        </header>
+                                        <section class="scrollable">
+                                                <div id="categoryTree">
+                                                </div>
+                                        </section>
+                                    </section>
+                                </aside><!-- aside tree -->
+
+                                <section>
+
+                                    <section class="vbox">
+
+                                        <section class="scrollable wrapper">
+
+                                            <div id="galleryTable"></div><!-- gallery table -->
+
+                                        </section><!-- gallery end -->
+                                    </section><!-- hbox -->
+                                </section><!-- hbox -->
+
+                            </section><!-- hbox -->
+                        </section>
+                        <!-- side content -->
+                    </section>
+
+                </section>
+            </section>
+        </section>
+    </section><!-- vbox -->
+
+
+    <!-- category modal animated flipInX-->
+    <div id="categoryModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">分类添加/修改</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">分类名称</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">分类级别</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control selectpicker">
+                                        <option value="1">一级分类</option>
+                                        <option value="2">二级分类</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">分类状态</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6 col-sm-offset-4">
+                                    <button class="btn btn-primary m-r-sm">确定</button>
+                                    <button class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- modal body -->
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>modal footer -->
+            </div><!-- modal content -->
+        </div><!-- modal dialog -->
+    </div><!-- category modal -->
+
+    <script>
+        // 配置信息一定要放在boot.js上面，
+        // 所有js引用和代码放在页面底部
+        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var BasePath = './';
+    </script>
+
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/template/template-native.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/sortable/jquery.sortable.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.min.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.extend.js"></script>
+
+    <script>
+    var categoryList = {
+        init: function() {
+            this.initTree();
+        },
+        initTree: function() {
+            var _self = this;
+            /* init tree */
+            $.getJSON(BasePath+'json/brand.json', function (data) {
+                $('#categoryTree').treeview({
+                    data: data,
+                    enableLinks: true,
+                    showTags: true,
+                    expandIcon: 'i i-folder2',
+                    collapseIcon: 'i i-folder-open',
+                    levels: 1, //初始化显示的层级
+                    onNodeSelected: function(event, node){
+                        var params = {'brand':node.text,'node':node.nodeId};
+                        galleryTable.reloadTable(params);
+                    }
+                });
+            });
+        }
+    };
+
+    var galleryTable = {
+        init: function() {
+            this.initTable();
+        },
+        initTable: function() {
+            var _self = this;
+            $table = $("#galleryTable");
+            $table.bootstrapTable({
+                url: BasePath+'json/category.php',
+                showToggle: true,
+                showTitle: false,
+                cardColumns: 4,
+                classes: 'table table-no-bordered table-striped table-gallery',
+                columns: [{
+                    field: 'state',
+                    checkbox: true,
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    field: 'index',
+                    title: '序列',
+                    width: '10%',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    field: 'photo',
+                    title: '图片',
+                    width: '30%',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: function (value, obj, index) {
+                        var src = 'images/photo/'+value+'.jpg';
+                        return '<img src='+src+' />';
+                    }
+                }, {
+                    field: 'cateName',
+                    title: '品牌名',
+                    width: '30%',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    field: 'level',
+                    title: '分类号',
+                    width: '30%',
+                    align: 'center',
+                    valign: 'middle'
+                }],
+                responseHandler: function(res) {
+                    return _self.addIndex(res);
+                }
+            });
+        },
+        addIndex: function(data) {
+            $.each(data, function(i, obj) {
+                obj.index = i;
+                obj.photo = 'p'+i%8;
+            });
+            return data;
+        },
+        reloadTable: function(params) {
+            var _self = this;
+            $.getJSON(BasePath+'json/category.php', params, function(data) {
+                $("#galleryTable").bootstrapTable('load', _self.addIndex(data));
+            });
+        }
+    }
+
+
+    $(function(){
+        /**
+         * init sideNav
+         * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
+         */
+        $('#sideNav').sideNav({
+            url: BasePath+'json/left_tree.json'
+        });
+        /* init category */
+        categoryList.init();
+        /* init gallery */
+        galleryTable.init();
+    });
+    </script>
+
+</body>
+</html>

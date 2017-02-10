@@ -1,0 +1,28 @@
+<div class="form-group">
+    <label class="col-sm-4 control-label">{{label}}</label>
+    <div class="col-sm-8">
+        <div class="btn-group m-r">
+            <button data-toggle="dropdown" class="btn dropdown-toggle form-control" ><span class="dropdown-label">{{::defaultValue text defaultText}}</span><span class="caret"></span>
+            </button>
+            {{#if hiddenName}}
+            <input type="hidden" name="{{hiddenName}}" data-role="text" value="{{text}}" />
+            {{/if}}
+            {{#compare text "isEmpty"}}
+                <input type="hidden" data-required="true"/>
+            {{/compare}}
+            <ul class="dropdown-menu dropdown-select">
+                {{#eachArray list this}}
+                {{!::isDebug this parent}}
+                <li {{compare item.value "==" parent.value "class='active'"}}>
+                    <a {{::href}} >
+                        <input type="radio" 
+                        name="{{parent.name}}" 
+                        value="{{item.value}}" 
+                        {{compare item.value "==" parent.value "checked" }}
+                          data-text="{{item.key}}"/>{{item.key}}</a>
+                </li>
+                {{/eachArray}}
+            </ul>
+        </div>
+    </div>
+</div>

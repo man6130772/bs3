@@ -1,0 +1,7 @@
+<a 
+{{#if_design_mode}}
+{{::href}} 
+{{else}} 
+	href="{{::callBlockHandle "getLink" this}}" 
+{{/if_design_mode}}
+ style="background-image: url({{::getImageSrc imageSrc }});"></a>

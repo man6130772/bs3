@@ -1,0 +1,9 @@
+{{::initArray this "list" 3}}
+<div class="module-box column-count-3 column-gap-xs {{layout}}" style="{{::getHeight height}}">
+	{{#eachArray list this}}
+		<div class="item">
+		{{::callBlockHandle "image" value}}
+		</div>
+	{{/eachArray}}
+</div>
+{{::callBlockHandle "footer" this}}

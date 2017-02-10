@@ -1,0 +1,13 @@
+{{#compare heightLable 'isEmpty'}}
+	{{::setDataValue this 'heightLable' '模块'}}
+{{/compare}}
+<div class="form-group">
+    <label class="col-sm-4 control-label">{{heightLable}}高度</label>
+    <div class="col-sm-8">
+        <div class="input-group">
+		    <input type="text" name="height" class="form-control" value="{{height}}" data-required="true" {{::isHeightFieldReadyOlny}}>
+		    <span class="input-group-addon">像素</span>
+		</div>
+    </div>
+</div>
+ 

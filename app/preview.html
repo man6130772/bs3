@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- light7框架样式 -->
+    <link rel="stylesheet" href="http://devstatic.qxclub.cn/lg7/1.0.1/css/ui.min.css">
+    <!-- <link rel="stylesheet" href="http://s.belle.net.cn/lg7/1.0.1/css/ui.min.css" /> -->
+    <!-- 模块布局样式 -->
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/lts.css" />
+    <!-- 轮播图样式 -->
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/swiper/swiper.min.css">
+    <base target="_blank" />
+    <style type="text/css">
+    .swiper-container {
+        padding-bottom: 0px !important;
+    }
+	.module_n.swiper-container-horizontal .swiper-pagination-progress {
+		height: 4px;
+		top: auto;
+		bottom: 0;
+		width: 30%;
+		left: 38%;
+	}
+    
+	/*
+	.module-box{ margin: 0 5px; padding: 0; }
+	.module-box.swiper-container { margin: 0 5px; }
+	.module-box  img { vertical-align: middle; }
+	*/
+	.module_n.swiper-container-horizontal .swiper-slide {
+		width:105px;
+		height:70px;
+	}
+
+	.module_n.swiper-container-horizontal .swiper-scrollbar{
+	   background: none;
+	}
+    </style>
+</head>
+
+<body class="">
+    <div class="page page-current">
+        <div class="content">
+            <!-- 模块布局 -->
+            <div id="renderView" class="module-preview"></div>
+        </div>
+    </div>
+    <script src="http://devstatic.qxclub.cn/lg7/1.0.1/js/libs/jquery.min.js"></script>
+    <script src="http://devstatic.qxclub.cn/lg7/1.0.1/js/swiper/swiper.jquery.umd.min.js"></script>
+    <script src="http://devstatic.qxclub.cn/lg7/1.0.1/js/lazyload/jquery.lazyload.js"></script>
+    <!-- dev -->
+    <script src="LTS/dev/preview.dev.js"></script>
+    <script src="LTS/dev/tpls/all.js"></script>
+    
+    <!-- product -->
+    <!-- 
+    <script src="http://devstatic.qxclub.cn/lg7/1.0.1/js/lts/app.preview.bundle.min.js"></script>
+    <script src="http://devstatic.qxclub.cn/lg7/1.0.1/js/lts/all.tpls.preview.bundle.min.js"></script>
+    -->
+    <script type="text/javascript">
+    <!--
+    var getParam = (function() {
+        var args = window.location.href.split('?');
+
+        for (var i = 1; i < args.length; i++) {
+            var a = args[i];
+            var array = a.split('=');
+            args[array[0]] = array[1];
+        }
+        return function(key) {
+            return decodeURIComponent(args[key] || '');
+        };
+    })();
+
+    var data;
+
+    if (getParam('data')) {
+        data = JSON.parse(getParam('data') || '[]');
+    } else {
+        data = [{
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "120",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_94ce0ff549df1144ec4bef42b2d365c2.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l_1_1",
+      "seq": 0
+    }, {
+      "name": "xxx",
+      "startTime": "",
+      "endTime": "",
+      "height": "70",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_cd77cffb3d706f35d8a18a77885a039e.jpg",
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }],
+      "layout": "notice",
+      "seq": 8
+    },{
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "120",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_94ce0ff549df1144ec4bef42b2d365c2.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l1",
+      "seq": 0
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "imageSrc": "upload_4678a84a75477ae843b82023778103d6.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "module_l2",
+      "seq": 1
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_9e82ac32d6fa26cc3fa5e85ad346eb56.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_d9012efb28b23d09a7743c8f1c171bda.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_42a55449172bfc56e92f70e1b67827cd.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l3",
+      "seq": 2
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_85d314ebee6c63d8d08b3d69d9e0b755.jpg",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_bc09d4d962b4d92658cbd0687d4be994.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_47682f501c2e446beb1d92df40e441c6.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_2_1",
+      "seq": 3
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_1_2",
+      "seq": 4
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l_1_2",
+      "seq": 5
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5f1a67707f1fba7e394ff81bfe9ea619.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_653eeeb945adb65f983ec01d1a907fe4.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_n",
+      "seq": 6
+    }, {
+      "name": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "file": "",
+        "imageSrc": "upload_00182414807ea62fbcc7d5904c64214e.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_5f7eefbca090272fbca46572817507c8.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1a177611853788dc0f5b52508d8c2158.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }],
+      "layout": "slides",
+      "seq": 7
+    },  {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_f5bc870431bb01061ee28196da272705.jpgxxx",
+        "title": "dds",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpgxxx",
+        "title": "ddd",
+        "linkType": ""
+      }],
+      "layout": "module_l2_fixed",
+      "seq": 9
+    }, {
+      "name": "11",
+      "startTime": "",
+      "endTime": "",
+      "height": "190",
+      "margin": "false",
+      "list": [{
+        "linkType": "3",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "linkType": "5",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "pro_2",
+      "seq": 10
+    }, {
+      "name": "xxx",
+      "startTime": "",
+      "endTime": "",
+      "height": "70",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_cd77cffb3d706f35d8a18a77885a039e.jpg",
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }],
+      "layout": "notice",
+      "seq": 8
+    },{
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "120",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_94ce0ff549df1144ec4bef42b2d365c2.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l1",
+      "seq": 0
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "imageSrc": "upload_4678a84a75477ae843b82023778103d6.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "module_l2",
+      "seq": 1
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_9e82ac32d6fa26cc3fa5e85ad346eb56.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_d9012efb28b23d09a7743c8f1c171bda.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_42a55449172bfc56e92f70e1b67827cd.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l3",
+      "seq": 2
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_85d314ebee6c63d8d08b3d69d9e0b755.jpg",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_bc09d4d962b4d92658cbd0687d4be994.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_47682f501c2e446beb1d92df40e441c6.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_2_1",
+      "seq": 3
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_1_2",
+      "seq": 4
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l_1_2",
+      "seq": 5
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5f1a67707f1fba7e394ff81bfe9ea619.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_653eeeb945adb65f983ec01d1a907fe4.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_n",
+      "seq": 6
+    }, {
+      "name": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "file": "",
+        "imageSrc": "upload_00182414807ea62fbcc7d5904c64214e.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_5f7eefbca090272fbca46572817507c8.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1a177611853788dc0f5b52508d8c2158.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }],
+      "layout": "slides",
+      "seq": 7
+    },  {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_f5bc870431bb01061ee28196da272705.jpgxxx",
+        "title": "dds",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpgxxx",
+        "title": "ddd",
+        "linkType": ""
+      }],
+      "layout": "module_l2_fixed",
+      "seq": 9
+    }, {
+      "name": "11",
+      "startTime": "",
+      "endTime": "",
+      "height": "190",
+      "margin": "false",
+      "list": [{
+        "linkType": "3",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "linkType": "5",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "pro_2",
+      "seq": 10
+    }, {
+      "name": "xxx",
+      "startTime": "",
+      "endTime": "",
+      "height": "70",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_cd77cffb3d706f35d8a18a77885a039e.jpg",
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }],
+      "layout": "notice",
+      "seq": 8
+    },{
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "120",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_94ce0ff549df1144ec4bef42b2d365c2.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l1",
+      "seq": 0
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "imageSrc": "upload_4678a84a75477ae843b82023778103d6.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "module_l2",
+      "seq": 1
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_9e82ac32d6fa26cc3fa5e85ad346eb56.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_d9012efb28b23d09a7743c8f1c171bda.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_42a55449172bfc56e92f70e1b67827cd.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l3",
+      "seq": 2
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_85d314ebee6c63d8d08b3d69d9e0b755.jpg",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_bc09d4d962b4d92658cbd0687d4be994.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_47682f501c2e446beb1d92df40e441c6.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_2_1",
+      "seq": 3
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_1_2",
+      "seq": 4
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l_1_2",
+      "seq": 5
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5f1a67707f1fba7e394ff81bfe9ea619.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_653eeeb945adb65f983ec01d1a907fe4.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_n",
+      "seq": 6
+    }, {
+      "name": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "file": "",
+        "imageSrc": "upload_00182414807ea62fbcc7d5904c64214e.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_5f7eefbca090272fbca46572817507c8.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1a177611853788dc0f5b52508d8c2158.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }],
+      "layout": "slides",
+      "seq": 7
+    },  {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_f5bc870431bb01061ee28196da272705.jpgxxx",
+        "title": "dds",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpgxxx",
+        "title": "ddd",
+        "linkType": ""
+      }],
+      "layout": "module_l2_fixed",
+      "seq": 9
+    }, {
+      "name": "11",
+      "startTime": "",
+      "endTime": "",
+      "height": "190",
+      "margin": "false",
+      "list": [{
+        "linkType": "3",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "linkType": "5",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "pro_2",
+      "seq": 10
+    }, {
+      "name": "xxx",
+      "startTime": "",
+      "endTime": "",
+      "height": "70",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_cd77cffb3d706f35d8a18a77885a039e.jpg",
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }],
+      "layout": "notice",
+      "seq": 8
+    },{
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "120",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_94ce0ff549df1144ec4bef42b2d365c2.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l1",
+      "seq": 0
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "imageSrc": "upload_4678a84a75477ae843b82023778103d6.jpg",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "module_l2",
+      "seq": 1
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_9e82ac32d6fa26cc3fa5e85ad346eb56.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_d9012efb28b23d09a7743c8f1c171bda.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_42a55449172bfc56e92f70e1b67827cd.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l3",
+      "seq": 2
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_85d314ebee6c63d8d08b3d69d9e0b755.jpg",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_bc09d4d962b4d92658cbd0687d4be994.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_47682f501c2e446beb1d92df40e441c6.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_2_1",
+      "seq": 3
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_1_2",
+      "seq": 4
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l_1_2",
+      "seq": 5
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5f1a67707f1fba7e394ff81bfe9ea619.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_653eeeb945adb65f983ec01d1a907fe4.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_n",
+      "seq": 6
+    }, {
+      "name": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "file": "",
+        "imageSrc": "upload_00182414807ea62fbcc7d5904c64214e.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_5f7eefbca090272fbca46572817507c8.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1a177611853788dc0f5b52508d8c2158.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }],
+      "layout": "slides",
+      "seq": 7
+    },  {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_f5bc870431bb01061ee28196da272705.jpgxxx",
+        "title": "dds",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpgxxx",
+        "title": "ddd",
+        "linkType": ""
+      }],
+      "layout": "module_l2_fixed",
+      "seq": 9
+    }, {
+      "name": "11",
+      "startTime": "",
+      "endTime": "",
+      "height": "190",
+      "margin": "false",
+      "list": [{
+        "linkType": "3",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "linkType": "5",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "pro_2",
+      "seq": 10
+    }];
+    };
+
+
+    /*
+        var $canvas = $('#qrcodeCanvas');
+        $canvas.empty();
+        $canvas.qrcode({
+            width: 256,
+            height: 256,
+            text: window.location.href
+        });
+    */
+    (function(factory) {
+        window.App ? factory(window.App) : window.initApp = factory;
+    })(function(App) {
+        var helper = App.helper;
+
+        helper.defaultImageSrc = "images/common/p0.jpg";
+        helper.imageServer = 'http://172.17.210.82:8901/tmp/';
+
+		var imageLazyloadAttr='data-lazyload-src';
+
+        App.init({
+			'image-lazyload-attr': imageLazyloadAttr,
+			/**
+			*	data 数据结构 {
+			*		"id": "2c915889584dda0e01584dda0eac0001",
+			*		"seq": "0",
+			*		"moduleId": "2c915889584dda0e01584dda0eac0000",
+			*		"title": "",
+			*		"imageSrc": "",
+			*		"linkType": "5",
+			*		"pageId": "",
+			*		"link": "/ftl/productList/productDetails.ftl?productNo=20161121523&salePrice=null&tagPrice=null",
+			*		"productNo": "20161121523",
+			*		"productName": "白色绵羊皮女皮凉鞋",
+			*		"subStartTime": "",
+			*		"subEndTime": "",
+			*		"tag": "",
+			*		"categoryNo": "",
+			*		"categoryName": "",
+			*		"linkId": "2c9157ef582a1cf501582a2d73c90682_20161121523_POCP01_1",
+			*		"linkName": "白色绵羊皮女皮凉鞋",
+			*		"priceAccording": "1",
+			*		"mallProductId": "2c9157ef582a1cf501582a2d73c90682",
+			*
+			*
+			*		"element": "element",
+			*		"moduleData": "object"
+			*	}
+			*/
+			onPriceRequest: function(data, callback) {
+				
+				//也可以不执行回调自己通过data.element.innerHTML自定义
+				callback({
+				  title: "Nike 耐克官方 NIKE FLEX EXPERIENCE RN 5 男子跑步鞋 844514",
+				  //图片url
+				  image:'https://sf-sponsor.b0.upaiyun.com/45751d8fcd71e4a16c218e0daa265704.png',
+				  price: "&yen;199.99",
+				  link:'http://baidu.com'
+				});
+			},
+            getLinkURL:function(linkId, linkType){
+
+            },
+            render: $('#renderView'),
+            getHTML: function(html) {
+                return '<section class="module">' + html + '</section>';
+            },
+            ready: function() {
+				
+				$("img["+imageLazyloadAttr+"]").lazyload({
+					data_attribute : imageLazyloadAttr,
+					placeholder: 'images/common/p0.jpg',
+					container : this.render.parent()[0]
+				});
+
+
+                var swiper = new Swiper('.swiper-container.carousel', {
+                    pagination: '.swiper-pagination',
+					loop:true,
+                    autoplay: 1500,
+                    autoplayDisableOnInteraction: false,
+                    paginationClickable: true,
+					// Disable preloading of all images
+					preloadImages: false,
+					// Enable lazy loading
+					lazyLoading: true
+					/*,
+                    mousewheelControl: true
+					*/
+                });
+
+
+                var swiper = new Swiper('.swiper-container.list', {
+					scrollbar: '.swiper-scrollbar',
+//					loop:true,
+					scrollbarHide: true,
+					slidesPerView: 'auto',
+//					centeredSlides: true,
+					spaceBetween: 5,
+					grabCursor: true,
+					// Disable preloading of all images
+					preloadImages: false,
+					// Enable lazy loading
+					lazyLoading: true
+                });
+
+                var swiper = new Swiper('.swiper-container.vertical', {
+                    direction: 'vertical',
+					loop:true,
+                    slidesPerView:1,
+                    autoplay: 1500,
+                    autoplayDisableOnInteraction: false,
+					// Disable preloading of all images
+					preloadImages: false,
+					// Enable lazy loading
+					lazyLoading: true
+					/*,
+                    mousewheelControl: true
+					*/
+                });
+
+				$('.swiper-container img').each(function(i,img){
+					  var $img = $(img);
+					  var src=$img.attr(imageLazyloadAttr);
+					  $img.attr('src', src);
+					  $img.removeAttr(imageLazyloadAttr);
+				});
+
+            },
+            data: data
+        });
+    });
+
+ 
+    //-->
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+
+<div class="module-box {{layout}}" style="{{::getHeight height}}">
+{{#if_design_mode}}
+    {{::initArray this "list" 2}}
+    {{::arrayToIndexItem list}}
+
+    <div class="table-box" style="{{::getHeight height}}" >
+	    <div class="img-item">
+	        {{::callBlockHandle "image" list.item0}}
+	    </div>
+
+	    <div class="text-item"  style="{{::getHeight height}}" >
+		    <div class="swiper-slide">
+		    	<a class="item-title" {{::href}}>
+					<span class="item-tag">{{list.item0.tag}}</span>{{list.item0.title}}
+	         	</a>
+	    	</div>
+	    </div>
+    </div>
+{{else}}
+	{{::initArray this "list" 2}}
+    {{::arrayToIndexItem list}}
+    <div class="table-box swiper-container vertical" style="{{::getHeight height}}" >
+		<div class="img-item">
+	        {{::callBlockHandle "image" list.item0}}
+	    </div>
+		<div class="text-item" style="{{::getHeight height}}"  >
+		{{#eachArray list this}}
+		<div class="swiper-slide">
+			<a class="item-title" href="{{::callBlockHandle "getLink" value}}">
+			<span class="item-tag">{{value.tag}}</span>
+	        {{value.title}}</a>
+	    </div>
+		{{/eachArray}}
+		</div>
+	</div>
+{{/if_design_mode}}    
+</div>
+{{::callBlockHandle "footer" this}}
+
+
+
+
+
+
+<div class="module-box notice" style="height: 70px;">
+    <div class="table-box" style="height: 70px;">
+	    <div class="img-item" >
+	        <a href="javascript:;"><img src="http://172.17.210.82:8901/tmp/upload_cd77cffb3d706f35d8a18a77885a039e.jpg" style="width: 160px;"/></a>
+	    </div>
+	    <div class="text-item" style="height: 70px;">
+		    <div class="swiper-slide" >
+		    	<a   href="javascript:;">
+					<span class="item-tag">热爆款卖</span>d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf
+	         	</a>
+	    	</div>
+	    </div>
+    </div>
+</div>

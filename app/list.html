@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="app no-touch">
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.extend.css" type="text/css" />
+</head>
+
+<body class="">
+    <section class="vbox">
+        <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
+            <div class="navbar-header aside-md">
+                <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
+                <a href="index.html" class="navbar-brand"> <img src="http://172.17.210.82/ocp/images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
+                <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user"> <i class="fa fa-cog"></i> </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+                <li class="hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="i i-chat3"></i> <span class="badge badge-sm up bg-danger count">2</span> </a>
+                    <section class="dropdown-menu aside-xl animated flipInY">
+                        <section class="panel bg-white">
+                            <div class="panel-heading b-light bg-light"> <strong>你有<span class="count">2</span> 个新通知</strong> </div>
+                            <div class="list-group list-group-alt">
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
+                                <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0版本发布<br> <small class="text-muted">1小时前</small> </span> </a>
+                            </div>
+                            <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </div>
+                        </section>
+                    </section>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
+                    <ul class="dropdown-menu animated fadeInRight">
+                        <li> <span class="arrow top"></span> <a href="#">系统设置</a> </li>
+                        <li> <a href="#">资料修改</a> </li>
+                        <li>
+                            <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息</a>
+                        </li>
+                        <li> <a href="#">帮助</a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="login.html" data-toggle="ajaxModal">退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <section class="hbox stretch">
+                <!-- .aside -->
+                <aside class="bg-light dker aside-md hidden-print hidden-xs sidebar" id="nav">
+                    <section class="vbox">
+                        <section class="w-f scrollable">
+                            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                                <div class="clearfix wrapper dk nav-user hidden-xs">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="thumb avatar pull-left m-r">
+                                                <img src="http://172.17.210.82/ocp/images/avatar/a0.png" class="dker" alt="..."> 
+                                                <i class="on md b-black"></i>
+                                            </span>
+                                            <span class="hidden-nav-xs clear">
+                                                <span class="block m-t-xs">
+                                                    <strong class="font-bold text-lt">维森莫</strong>
+                                                    <b class="caret"></b>
+                                                </span> 
+                                                <span class="text-muted text-xs block">超级管理员</span>
+                                            </span>
+                                        </a>
+                                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                            <li> <span class="arrow top hidden-nav-xs"></span> <a href="#">系统设置</a> </li>
+                                            <li> <a href="#">资料修改</a> </li>
+                                            <li>
+                                                <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息 </a>
+                                            </li>
+                                            <li> <a href="#">帮助</a> </li>
+                                            <li class="divider"></li>
+                                            <li> <a href="login.html" data-toggle="ajaxModal">退出</a> </li>
+                                        </ul>
+                                    </div>
+                                </div><!-- user -->
+                                <nav id="sideNav" class="nav-primary hidden-xs">
+                                </nav><!-- nav -->
+                            </div>
+                        </section>
+                        <footer class="footer hidden-xs no-padder dk text-center-nav-xs">
+                            <a rel="tooltip" title="退出" href="login.html" data-toggle="ajaxModal" class="btn btn-icon btn-inactive text-black pull-right m-l-xs m-r-xs hidden-nav-xs"> <i class="i i-logout"></i> </a>
+                            <a id="sideNavSwitch" rel="tooltip" title="收缩" href="#nav" data-toggle="class:nav-xs" class="btn btn-icon btn-inactive text-black m-l-xs m-r-xs"> <i class="i i-circleleft text"></i> <i class="i i-circleright text-active"></i> </a>
+                        </footer>
+                    </section>
+                </aside>
+                <!-- /.aside -->
+                <section id="content">
+                    <section class="vbox">
+                        <section class="scrollable padder">
+
+                            <section class="panel panel-default pos-rlt">
+                                <div class="panel-body">
+                                    <form class="form" role="form">
+                                        <div class="row">
+                                            <div class="col-md-2"><!-- 有6个用col-md-2，有4个用col-md-3 -->
+                                                <label for="exampleInputEmail2">选项名称一</label>
+                                                <input type="text" class="form-control" id="brand" placeholder="品牌名称">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="brandType">普通下拉</label>
+                                                <select class="form-control selectpicker" id="brandType"><!-- 统一加上样式：selectpicker 搜索需加属性： data-live-search="true" -->
+                                                    <option value="">全部</option>
+                                                    <option value="0">百丽Belle</option>
+                                                    <option value="1">他她TATA</option>
+                                                    <option value="2">天美意TEENMIX</option>
+                                                    <option value="3">匡威CONVERSE</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2"><!-- sr-only -->
+                                                <label for="ajax-select">ajax下拉</label>
+                                                <select id="ajax-select" class="form-control" multiple></select><!-- 多选加属性： multiple 搜索需加属性： data-live-search="true" -->
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="exampleInputPassword2">开始时间</label>
+                                                <input type="text" class="form-control" id="startDate" placeholder="开始日期">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="exampleInputPassword2">结束时间</label>
+                                                <input type="text" class="form-control" id="endDate" placeholder="结束日期">
+                                            </div>
+                                            <div class="col-md-1">
+                                                <label for="exampleInputPassword2">&nbsp;</label>
+                                                <div><button id="searchBtn" type="button" class="btn btn-default">搜索</button></div>
+                                            </div>
+                                        </div><!-- row -->
+                                    </form>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-default panel-arrow panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                            </section>
+
+                            <div class="m-b-md">
+                                <h3 class="m-b-none">
+                                    <small class="pull-right">
+                                        <a href="#" id="btn0" class="btn btn-default" data-toggle="modal">加载等待</a>
+                                        <a href="#modal-form" id="btn1" class="btn btn-success" data-toggle="modal">新建</a>
+                                        <a href="#" id="btn2" class="btn btn-default">按钮2</a>
+                                        <a href="#" id="btn3" class="btn btn-default">按钮3</a>
+                                    </small>
+                                    商品列表
+                                </h3>
+                            </div>
+
+                            <table id="table" 
+                            data-classes="table table-no-bordered table-striped" 
+                            data-toggle="table" 
+                            data-pagination="true" 
+                            data-row-style="rowStyle" 
+                            data-show-columns="true" 
+                            data-show-toggle="true" 
+                            data-sortable="true" 
+                            data-detail-view="true" 
+                            data-card-columns="1" 
+                            data-detail-formatter="detailFormatter" 
+                            data-url="json/list.json"><!-- data-height="460"  -->
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2" data-field="state" data-checkbox="true"></th>
+                                        <th rowspan="2" data-field="id" data-sortable="true" data-halign="right" data-align="center" data-switchable="false">ID</th>
+                                        <th rowspan="2" data-field="productName" data-sortable="true" data-halign="center" data-align="left" data-formatter="nameFormatter">商品名称</th>
+                                        <th colspan="2" data-halign="center">商品详情</th>
+                                        <th rowspan="2" data-field="saler">销售员</th>
+                                        <th rowspan="2" data-formatter="operateFormatter">操作</th>
+                                    </tr>
+                                    <tr>
+                                        <th data-field="number" data-halign="left" data-align="right">商品数量</th>
+                                        <th data-field="price" data-formatter="priceFormatter">商品价格</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <script>
+                                function rowStyle(row, index) {
+                                    var classes = ['active', 'success', 'info', 'warning', 'danger'];
+
+                                    if (index % 2 === 0 && index / 2 < classes.length) {
+                                        return {
+                                            classes: classes[index / 2]
+                                        };
+                                    }
+                                    return {};
+                                }
+                                function nameFormatter(value, row) {
+                                    var icon = arguments[2] % 2 === 0 ? 'glyphicon-star' : 'glyphicon-star-empty'
+
+                                    return '<i class="glyphicon ' + icon + '"></i> ' + value;
+                                }
+
+                                function priceFormatter(value) {
+                                    // 16777215 == ffffff in decimal
+                                    var color = '#'+Math.floor(Math.random() * 6777215).toString(16);
+                                    return '<div  style="display:inline;color: ' + color + '">' +
+                                            '<i class="glyphicon glyphicon-usd"></i>' +
+                                            value.substring(1) +
+                                            '</div>';
+                                }
+                                function detailFormatter(index, row) {
+                                    var html = [];
+                                    $.each(row, function (key, value) {
+                                        html.push('<p><b>' + key + ':</b> ' + value + '</p>');
+                                    });
+                                    return html.join('');
+                                }
+                            </script>
+
+                            <button type="button" class="btn btn-primary btn-lg m-b-md" data-toggle="modal" data-target="#myModalLabel">点击出弹出tableList</button>
+                            
+                            <div class="modal fade" id="myModalLabel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <table id="divTable" 
+                                            data-classes="table table-no-bordered table-striped" 
+                                            data-toggle="table" 
+                                            data-pagination="true" 
+                                            data-card-view="true"
+                                            data-row-style="rowStyle" 
+                                            data-show-columns="true" 
+                                            data-show-toggle="true" 
+                                            data-sortable="true" 
+                                            data-detail-view="true" 
+                                            data-search="true" 
+                                            data-url="json/list.json"><!-- data-height="460"  -->
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2" data-field="state" data-checkbox="true"></th>
+                                                        <th rowspan="2" data-field="id" data-sortable="true" data-halign="right" data-align="center" data-switchable="false" data-switchable="false">ID</th>
+                                                        <th rowspan="2" data-field="productName" data-sortable="true" data-halign="center" data-align="left" data-formatter="nameFormatter">商品名称</th>
+                                                        <th colspan="2" data-halign="center">商品详情</th>
+                                                        <th rowspan="2" data-field="saler">销售员</th>
+                                                        <th rowspan="2" data-formatter="operateFormatter" data-visible="false">操作</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th data-field="number" data-halign="left" data-align="right">商品数量</th>
+                                                        <th data-field="price" data-formatter="priceFormatter">商品价格</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- side content -->
+                    </section>
+
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script>
+        // 配置信息一定要放在boot.js上面，
+        // 所有js引用和代码放在页面底部
+        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var BasePath = './';
+    </script>
+
+    <!-- // <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script> -->
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/moment.min.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/zh-cn.js"></script>
+
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.extend.js"></script>
+
+    <script>
+    $(function(){
+        /* test bootbox */
+        // bootbox.alert("Hello world!");
+        
+        /**
+         * init sideNav
+         * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
+         */
+        $('#sideNav').sideNav({
+            url: BasePath+'json/left_tree.json'
+        });
+
+        /**
+         * datetimepicker setting
+         */
+        $('#startDate').datetimepicker({
+            format: 'YYYY-MM-DD H:mm:ss',
+            // defaultDate: moment().format('YYYY-MM-DD H:59:59'),
+            // sideBySide: true,
+            // debug: true,
+            locale: moment.locale('zh-cn')
+        });
+        $('#endDate').datetimepicker({
+            format: 'YYYY-MM-DD H:mm:ss',
+            // defaultDate: moment().format('YYYY-MM-DD H:mm:ss'),
+            // sideBySide: true,
+            // debug: true,
+            locale: moment.locale('zh-cn')
+        });
+        $('#startDate').on("dp.change", function (e) {
+            var rel = $(this).attr('rel');
+            $('#endDate').data('DateTimePicker').minDate(e.date);
+        });
+        $('#endDate').on("dp.change", function (e) {
+            var rel = $(this).attr('rel');
+            $('#startDate').data('DateTimePicker').maxDate(e.date);
+        });
+    });
+
+    /**
+     * bootstrap table
+     */
+    $('#table').bootstrapTable({
+        classes: 'table table-no-bordered table-striped',
+        // toggle: 'table',
+        pagination: true,
+        dataField: 'rows',
+        url: 'json/list.json',
+        // onLoadSuccess: function(){
+        //     $('#table').editableTableWidget();
+        // }
+    });
+
+    /**
+     * bootstrap notify
+     */
+    $.notify({
+        // 选项
+        // icon: 'glyphicon glyphicon-warning-sign',
+        // title: '标题标题标题',
+        message: '弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试弹出消息提示测试',
+        url: 'index.html',
+        target: '_self' //默认_blank
+    },{
+        // 设置
+        type: "info",// 默认info, 共success,danger,warning,info
+        placement: { // 显示位置
+            from: "top", // 默认top, 共top, bottom
+            align: "center" // 默认right, 共left, center, right
+        },
+        // url_target: '_blank',
+        onShow: null,
+        onShown: null,
+        onClose: null,
+        onClosed: null
+    });
+
+    /**
+     * bootstrap select
+     */
+    var options = {
+        preserveSelected: false, //不使用底部显示当前选中
+        preLoadAllData: true, //默认显示所有数据
+        ajax: {
+            url: BasePath+'json/category.json',
+            type: 'GET',
+            dataType: 'json'
+        }
+    };
+    $('#ajax-select').selectpicker().ajaxSelectPicker(options);
+
+    $('#brandType').on('changed.bs.select', function (e, index, selected, state) {
+        console.log(e+'-'+index+'-'+selected+'-'+state);
+    });
+
+    // $('#searchBtn').click(function(){
+    //     $('#ajax-select').selectpicker('val', 25);
+    // });
+
+    $('#btn1').click(function(){
+        var row = $('#table').bootstrapTable('getRowByUniqueId', 2);
+        console.log('getRowByUniqueId: ' + row);
+    });
+
+    /**
+     * bootstrap table setting
+     */
+    function operateFormatter(value, row, index) {
+        return [
+            '<a class="edit" href="#'+index+'" data-toggle="tooltip" data-placement="top" title="修改">',
+            '<i class="fa fa-edit text-primary"></i>',
+            '</a>  ',
+            '<a class="remove" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="删除">',
+            '<i class="fa fa-remove text-danger"></i>',
+            '</a>'
+        ].join('');
+    }
+
+    var $table = $('#divTable');
+
+    $('#myModalLabel').on('shown.bs.modal', function () {
+        $table.bootstrapTable('resetView');
+    });
+
+    function expandTable($detail, cells) {
+        buildTable($detail.html('<table></table>').find('table'), cells, 1);
+    }
+
+    function buildTable($el, cells, rows) {
+        $el.bootstrapTable({
+            columns: $table.data("bootstrap.table").options.columns,
+            data: $table.data("bootstrap.table").options.data,
+            detailView: cells > 1,
+            classes: "table table-no-bordered table-striped",
+            pagination: true,
+            cardView: true,
+            rowStyle: "rowStyle",
+            showColumns: true,
+            showToggle: true,
+            sortable: true,
+            showTitle:false,
+            onExpandRow: function (index, row, $detail) {
+                expandTable($detail, cells - 1);
+            }
+        });
+    }
+
+    $table.bootstrapTable({
+        onExpandRow: function(index, row, $detail) {
+            expandTable($detail, 2);
+        }
+    });
+
+    /**
+     * bootstrap dropdown treeview: 下拉树
+     */
+    $.getJSON('json/brand.json', function(data) {
+        $('#brand').treeview({
+            data: data,
+            levels: 9,
+            multiSelect: true,
+            nodeIcon: 'fa fa-square-o',
+            selectedIcon: 'fa fa-check-square-o',
+            selectAll: true, // 选中父节点，同时选中子节点
+            
+            // 下拉树的配置项
+            dropdownWidth: 220,  // 下拉框宽度，不设置就自适应
+            type: 'dropdownlist',
+
+            // 只能选最底层子节点功能
+            // noSelectParent: true,
+
+            // 添加索引项的功能
+            indexId: 'mallCateNo',
+
+            onNodeSelected: function(event, node) {
+                // console.log(node);
+                var params = {
+                    'brand': node.text,
+                    'node': node.nodeId
+                };
+            }
+        });
+        // getSelected();
+    });
+
+
+    /**
+     * 加载等待器
+     */
+    $("#btn0").on('click', function(e){
+        waitingDialog.show();
+        // waitingDialog.show('自定义加载等待信息');
+        setTimeout(function () {
+         waitingDialog.hide();
+        }, 2000);
+    });
+
+    $("#btn2").on('click', function(e){
+        // getSelected();
+        $('#brand').data("dropdownlist").$treeview.treeview("unselectAll");
+        return false;
+    });
+
+    function getSelected(){
+        console.log($('#brand').data("dropdownlist").$treeview.treeview("getSelected"));
+    }
+    </script>
+
+</body>
+</html>

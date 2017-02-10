@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+
+<head>
+  <meta charset="utf-8" />
+  <title>OCP微商城管理系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
+  <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/lts.css" type="text/css" />
+  <!-- 轮播图样式 -->
+  <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/swiper/swiper.min.css">
+</head>
+
+<body class="">
+  <section class="hbox stretch">
+    <aside class="bg-light lt b-r aside-lg">
+      <section class="vbox">
+        <header class="header clearfix b-b b-light">
+          <p class="h4 font-thin pull-left m-r-sm m-b-sm">布局</p>
+        </header>
+        <section class="scrollable padder-v">
+          <div class="row text-center" data-role="toolbar">
+          </div>
+        </section>
+      </section>
+    </aside>
+    <section class="bg-light lt module-edit">
+      <section class="vbox">
+        <header class="header panel panel-default no-padder clearfix">
+          <div class="panel-heading text-right bg-light clearfix">
+            <ul class="nav nav-tabs pull-left">
+              <li class="active">
+                <a class="h4 font-thin" href="#moduleEdit" data-toggle="tab">编辑</a>
+              </li>
+              <li>
+                <a class="h4 font-thin" href="#modulesPreview" data-toggle="tab">预览</a>
+              </li>
+              <li>
+                <a class="mobile-preview-btn" href="javascript:void(0);"><i class="fa fa-mobile fa-2x"></i></a>
+              </li>
+            </ul>
+            <button class="btn btn-sm btn-success m-r-sm" data-toggle="modal" data-target="#pagePropModal">页面属性</button>
+            <button class="btn btn-sm btn-primary" data-role="saveButton">保存</button>
+          </div>
+        </header>
+        <section class="scrollable">
+          <div class="panel-body">
+            <div class="tab-content">
+              <div class="tab-pane fade active in" id="moduleEdit" data-role="view">
+              </div>
+              <div class="tab-pane fade in" id="modulesPreview">
+                <form method="get" action="preview.html" target="previewFrame">
+                  <input type="hidden" name="data" />
+                </form>
+                <iframe style="width: 100%;height: 100%; border: none;" name="previewFrame"></iframe>
+              </div>
+            </div>
+            <!-- tab content -->
+          </div>
+          <!-- panel body -->
+        </section>
+        <!-- scrollable -->
+      </section>
+      <!-- vbox -->
+    </section>
+    <!-- center -->
+    <aside class="bg-light b-l aside-lg none">
+      <section class="vbox bg-light lt">
+        <header class="header text-right clearfix b-b">
+          <p class="h4 font-thin pull-left m-r-sm m-b-sm">属性</p>
+          <button class="btn btn-sm btn-success none" data-role="okButton">确定</button>
+          <button class="btn btn-sm btn-default none" data-role="cancelButton">取消</button>
+        </header>
+        <section class="scrollable wrapper">
+          <div class="form-horizontal" data-role="property">
+          </div>
+        </section>
+      </section>
+    </aside>
+    <!-- aside -->
+  </section>
+  <!-- mask modal -->
+  <div class="edit-mask" data-role="mask"></div>
+  <div id="qrcodeCanvas">
+    <canvas width="256" height="256"></canvas>
+  </div>
+  <!-- Bootstrap -->
+  <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+  <!-- dev -->
+  <script src="http://s.belle.net.cn/bs3/1.0.1/js/qrcode/jquery.qrcode.min.js"></script>
+  <!-- -->
+  <script src="LTS/dev/app.dev.js"></script>
+  <script src="LTS/dev/tpls/all.js"></script>
+  
+
+  <!-- product-->
+  <!-- 
+  <script src="http://devstatic.qxclub.cn/lg7/1.0.1/js/lts/app.bundle.min.js"></script>
+  <script src="http://devstatic.qxclub.cn/lg7/1.0.1/js/lts/all.tpls.bundle.min.js"></script>
+  -->
+  <script type="text/javascript">
+  //同步
+  /*
+    function getData(){
+        return <%=data%>;
+    };
+
+*/
+
+  var currentPreviewURL = __CreateJSPath()+'preview.html';
+
+  function reloadQRCode(url) {
+    currentPreviewURL = url;
+  };
+
+
+  $('.mobile-preview-btn').popover({
+    trigger: 'hover',
+    toggle: "popover",
+    trigger: "hover",
+    content: function() {
+      var $canvas = $('#qrcodeCanvas');
+      $canvas.empty();
+      $canvas.qrcode({
+        width: 200,
+        height: 200,
+        text: currentPreviewURL
+      });
+      return $('#qrcodeCanvas canvas')[0];
+    },
+    html: "true",
+    placement: "bottom",
+    title: "微信扫一扫预览效果"
+  });
+
+
+  (function(factory) {
+    window.App ? factory(window.App) : window.initApp = factory;
+  })(function(App) {
+
+    //上传服务器路径
+    window.WebUploaderOptions = window.WebUploaderOptions || {
+      server: 'http://172.17.210.82:8901/upload/'
+    };
+
+
+
+    //同步
+    //var data = getData();
+    //doAppRender(App, data);
+
+    /*
+       //异步
+       $.ajax({
+           url:'',
+           success:function(response){
+               var data=response;
+               doAppRender(App,data);
+           }
+       });
+        */
+    //
+
+    //先渲染app
+    doAppRender(App);
+
+    var data = [{
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "120",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_94ce0ff549df1144ec4bef42b2d365c2.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l_1_1",
+      "seq": 0
+    }, {
+      "name": "xxx",
+      "startTime": "",
+      "endTime": "",
+      "height": "70",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_cd77cffb3d706f35d8a18a77885a039e.jpg",
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "爆爆款款",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }, {
+        "tag": "热爆款卖",
+        "title": "d枯枯无可奈何无可奈何花落去 顶替顶替顶替枯xxxdf",
+        "linkType": "7"
+      }],
+      "layout": "notice",
+      "seq": 8
+    },{
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "120",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_94ce0ff549df1144ec4bef42b2d365c2.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l1",
+      "seq": 0
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpg",
+        "title": "标题1",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "imageSrc": "upload_4678a84a75477ae843b82023778103d6.jpg",
+        "title": "标题2",
+        "linkType": "1",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "module_l2",
+      "seq": 1
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_9e82ac32d6fa26cc3fa5e85ad346eb56.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_d9012efb28b23d09a7743c8f1c171bda.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_42a55449172bfc56e92f70e1b67827cd.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l3",
+      "seq": 2
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_85d314ebee6c63d8d08b3d69d9e0b755.jpg",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_bc09d4d962b4d92658cbd0687d4be994.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_47682f501c2e446beb1d92df40e441c6.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_2_1",
+      "seq": 3
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_1_2",
+      "seq": 4
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5943b02a9e3e06179c795276fdfb4e46.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_3e98170812deab24961859d56ef786f6.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_df130f4dc55cacc9744cd343d7257fce.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_l_1_2",
+      "seq": 5
+    }, {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_5f1a67707f1fba7e394ff81bfe9ea619.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_653eeeb945adb65f983ec01d1a907fe4.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_0018496ac4a5675c68b04ed6175d0bf3.jpg",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1c63ab5b56de68418b31ad532f6d9a32.jpg",
+        "linkType": ""
+      }],
+      "layout": "module_n",
+      "seq": 6
+    }, {
+      "name": "",
+      "height": "",
+      "margin": "false",
+      "list": [{
+        "file": "",
+        "imageSrc": "upload_00182414807ea62fbcc7d5904c64214e.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_5f7eefbca090272fbca46572817507c8.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }, {
+        "imageSrc": "upload_1a177611853788dc0f5b52508d8c2158.jpg",
+        "subStartTime": "",
+        "subEndTime": "",
+        "linkType": ""
+      }],
+      "layout": "slides",
+      "seq": 7
+    },  {
+      "name": "",
+      "startTime": "",
+      "endTime": "",
+      "height": "170",
+      "margin": "false",
+      "list": [{
+        "imageSrc": "upload_f5bc870431bb01061ee28196da272705.jpg",
+        "title": "dds",
+        "linkType": ""
+      }, {
+        "file": "",
+        "imageSrc": "upload_808e87d3173255d2de0c1093e9906b43.jpg",
+        "title": "ddd",
+        "linkType": ""
+      }],
+      "layout": "module_l2_fixed",
+      "seq": 9
+    }, {
+      "name": "11",
+      "startTime": "",
+      "endTime": "",
+      "height": "190",
+      "margin": "false",
+      "list": [{
+        "linkType": "3",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }, {
+        "linkType": "5",
+        "linkId": "1,2,3,4,5",
+        "linkName": "商品1,商品2,商品3,商品4,商品5"
+      }],
+      "layout": "pro_2",
+      "seq": 10
+    }];
+    //在手动渲染view
+    App.ViewPanel.initView(data);
+    //清空view
+    //App.ViewPanel.empty()
+
+
+    //品牌页面、分类页面、页面列表、商品列表页、商品详情页、热门关键字、无跳转
+
+    /*
+     *post
+     */
+    $('[href="#modulesPreview"]').on('click', function(event) {
+      if ($(this).closest('li.active').length > 0) {
+        return;
+      }
+      App.dom.property.hide();
+      var $modulesPreview = $('#modulesPreview');
+      var iframe = $modulesPreview.find('iframe:first');
+      iframe.css('height', App.dom.view[0].clientHeight);
+      $modulesPreview.find('[name=data]:first').val(JSON.stringify(App.ViewPanel.getViewProperty()));
+      setTimeout(function() {
+        $modulesPreview.find('form:first').submit();
+      }, 0);
+    });
+
+    /**
+     *ajax
+     */
+    /*
+    $('[href="#modulesPreview"]').on('click', function(event) {
+        if ($(this).closest('li.active').length > 0) {
+            return;
+        }
+        App.dom.property.hide();
+        var iframe = $('#modulesPreview').find('iframe:first');
+        iframe.css('height', App.dom.view[0].clientHeight);
+        $.ajax({
+            url: 'url',
+            data:{
+                data: encodeURIComponent(JSON.stringify(App.ViewPanel.getViewProperty()))
+            },
+            success: function() {
+                reloadQRCode(url);
+                iframe.attr('src', url);
+            }
+        });
+    });
+    */
+
+    $('[href=#moduleEdit]').on('click', function(event) {
+      App.dom.property.show();
+    });
+  });
+
+
+
+
+
+  function doAppRender(App, data) {
+    App.render({
+      defaultImageSrc: "images/common/p0.jpg",
+      imageServer: 'http://172.17.210.82:8901/tmp/',
+      data: data || null,
+      debug: true,
+      /*轮播图最大数量*/
+      MAX_SLIDES_SIZE: 5,
+      /*快报最大数量*/
+      MAX_NOTICE_SIZE: 5,
+
+      /*模块链接2默认高度*/
+	  //用样式控制.module_l2_fixed  .row-image   img {}
+      //MODULE_L2_FIXED_HEIGHT: 170,
+
+      /*快报默认高度*/
+	  //用样式控制.notice .img-item img{}
+      //NOTICE_HEIGHT: 70,
+
+
+      /*标签字符最大长度*/
+      TAG_MAX_LENGTH: 8,
+      MIN_HEIGHT: 50,
+      //            MAX_HEIGHT: 20000,
+      /*
+      modules: [{
+              name: "slides",
+              label: "轮播图"
+          }, {
+              name: "recommend",
+              label: "功能推荐"
+          }, {
+              name: "module_l_1_1",
+              label: "模块链接1-1"
+          }, {
+              name: "module_l_1_2",
+              label: "模块链接1-2"
+          }, {
+              name: "module_l_1_3",
+              label: "模块链接1-3"
+          }, {
+              name: "module_l1",
+              label: "模块链接1"
+          }, {
+              name: "module_l2",
+              label: "模块链接2"
+          }, {
+              name: "module_l3",
+              label: "模块链接3"
+          }, {
+              name: "module_2_1",
+              label: "模块链接2-1"
+          }, {
+              name: "module_1_2",
+              label: "模块链接1-2上下"
+          }, {
+              name: "module_n",
+              label: "模块链接N个横铺"
+          }, {
+              name: "notice",
+              label: "快报"
+          }, {
+              name: "pro_n",
+              label: "商品列表N个横铺"
+          }, {
+              name: "pro_3",
+              label: "商品列表3个横铺"
+          }, {
+              name: "pro_2",
+              label: "商品列表2个横铺"
+          }]
+      */
+      modules: [{
+        "name": "slides",
+        "icon": "slidesx",
+        //图片参考尺寸
+        "size": [{
+          width: 760,
+          height: 480
+        }]
+      }, {
+        "name": "recommend",
+        "icon": "recommendx",
+        "size": [{
+          width: 190,
+          height: 140
+        }]
+      }, {
+        "name": "module_l_1_1",
+        "icon": "module_l_1_1x",
+        "size": [{
+          width: 760,
+          height: 480
+        }]
+      }, {
+        "name": "module_l_1_2",
+        "icon": "module_l_1_2x",
+        "size": [{
+          width: 380,
+          height: 560
+        }, {
+          width: 380,
+          height: 280
+        }, {
+          width: 380,
+          height: 280
+        }]
+      }, {
+        "name": "module_l1",
+        "icon": "module_l1x",
+        "size": [{
+          width: 760,
+          height: 480
+        }]
+      }, {
+        "name": "module_l2",
+        "icon": "module_l2x",
+        "size": [{
+          width: 380,
+          height: 280
+        }]
+      }, {
+        "name": "module_l3",
+        "icon": "module_l3x",
+        "size": [{
+          width: 253,
+          height: 190
+        }]
+      }, {
+        "name": "module_2_1",
+        "icon": "module_2_1x",
+        "size": [{
+          width: 380,
+          height: 280
+        }, {
+          width: 380,
+          height: 280
+        }, {
+          width: 380,
+          height: 560
+        }]
+      }, {
+        "name": "module_1_2",
+        "icon": "module_1_2x",
+        "size": [{
+          width: 760,
+          height: 200
+        }, {
+          width: 380,
+          height: 200
+        }, {
+          width: 380,
+          height: 200
+        }]
+      }, {
+        "name": "module_n",
+        "icon": "module_nx",
+        "size": [{
+          width: 190,
+          height: 140
+        }]
+      }, {
+        "name": "notice",
+        "icon": "noticex",
+        "size": [{
+          width: 250,
+          height: 190
+        }]
+      }, {
+        "name": "pro_2",
+        "icon": "pro_2x",
+        "size": [{
+          width: 380,
+          height: 480
+        }]
+      }, {
+        "name": "module_l2_fixed",
+        "icon": "module_l2_fixedx",
+        "size": [{
+          width: 380,
+          height: 280
+        }]
+      }],
+      /**
+       *选择商品
+       *提交时执行callback
+       * item.linkId);
+       * item.linkName);
+       **/
+      onLinkSelected: function(type, callback) {
+        //type链接类型
+        var item = {
+          linkId: '1,2,3,4,5',
+          linkName: '商品1,商品2,商品3,商品4,商品5'
+        };
+        callback(item);
+      },
+      onSelectedImage: function(callback) {
+        callback("images/photo/p9.jpg");
+      },
+	  onImageSizeCheck:function(opts){
+		if(opts.height <= opts.naturalHeight && opts.width <= opts.naturalWidth){
+			return true;
+		}
+		window.bootbox.alert('请选择尺寸大于'+opts.width+'x'+opts.height+'的图片');
+		return false;
+	  },
+		/**
+		*	data 数据结构 {
+		*		"id": "2c915889584dda0e01584dda0eac0001",
+		*		"seq": "0",
+		*		"moduleId": "2c915889584dda0e01584dda0eac0000",
+		*		"title": "",
+		*		"imageSrc": "",
+		*		"linkType": "5",
+		*		"pageId": "",
+		*		"link": "/ftl/productList/productDetails.ftl?productNo=20161121523&salePrice=null&tagPrice=null",
+		*		"productNo": "20161121523",
+		*		"productName": "白色绵羊皮女皮凉鞋",
+		*		"subStartTime": "",
+		*		"subEndTime": "",
+		*		"tag": "",
+		*		"categoryNo": "",
+		*		"categoryName": "",
+		*		"linkId": "2c9157ef582a1cf501582a2d73c90682_20161121523_POCP01_1",
+		*		"linkName": "白色绵羊皮女皮凉鞋",
+		*		"priceAccording": "1",
+		*		"mallProductId": "2c9157ef582a1cf501582a2d73c90682",
+		*
+		*
+		*		"element": "element",
+		*		"moduleData": "object"
+		*	}
+		*/
+		onPriceRequest: function(data, callback) {
+			
+			//也可以不执行回调自己通过data.element.innerHTML自定义
+			callback({
+			  title: "Nike 耐克官方 NIKE FLEX EXPERIENCE RN 5 男子跑步鞋 844514",
+			  //图片url
+			  image:'https://sf-sponsor.b0.upaiyun.com/45751d8fcd71e4a16c218e0daa265704.png',
+			  price: "&yen;199.99",
+			  link:'http://baidu.com'
+			});
+		},
+      //链接位置
+      linkTypeData: [{
+        value: "1",
+        key: "品牌页面"
+      }, {
+        value: "2",
+        key: "分类页面"
+      }, {
+        value: "3",
+        key: "页面列表"
+      }, {
+        value: "4",
+        key: "商品列表页"
+      }, {
+        value: "5",
+        key: "商品详情页"
+      }, {
+        value: "6",
+        key: "热门关键字"
+      }, {
+        value: "7",
+        key: "无跳转"
+      }],
+      categoryMultiSelect: false,
+      //分类
+      categoryData: [{
+        text: '品牌1',
+        id: 1,
+        pid: 0
+      }, {
+        text: '分类1-1',
+        id: 11,
+        pid: 1
+      }, {
+        text: '分类1-1-1',
+        id: 111,
+        pid: 11
+      }, {
+        text: '品牌2',
+        id: 2,
+        pid: 0
+      }, {
+        text: '分类2-1',
+        id: 21,
+        pid: 2
+      }, {
+        text: '分类3',
+        id: 3,
+        pid: 0
+      }, {
+        text: '分类4',
+        id: 4,
+        pid: 0
+      }, {
+        text: '分类5',
+        id: 5,
+        pid: 0
+      }],
+      //品牌页面
+      brandsPageData: [{
+        key: '品牌页面1',
+        value: 1
+      }, {
+        key: '品牌页面2',
+        value: 2
+      }, {
+        key: '品牌页面3',
+        value: 4
+      }],
+      //商品页面
+      productPageData: [{
+        key: '商品页面1',
+        value: 1
+      }, {
+        key: '商品页面2',
+        value: 2
+      }, {
+        key: '商品页面3',
+        value: 4
+      }],
+      //页面
+      pageData: [{
+        key: '页面1',
+        value: 1
+      }, {
+        key: '页面2',
+        value: 2
+      }, {
+        key: '页面3',
+        value: 4
+      }],
+      //热索词
+      hotkeywordData: [{
+        key: '搜索字1',
+        value: 1
+      }, {
+        key: '搜索字2',
+        value: 2
+      }, {
+        key: '搜索字3',
+        value: 4
+      }]
+    });
+  };
+  </script>
+</body>
+
+</html>

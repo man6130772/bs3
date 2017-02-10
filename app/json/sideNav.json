@@ -1,0 +1,99 @@
+[{
+	"parentId": 1,
+	"state": "open",
+	"attributes": {},
+	"id": 140,
+	"text": "凡尚商城",
+	"children": [{
+		"parentId": 140,
+		"state": "open",
+		"attributes": {},
+		"id": 138579,
+		"text": "内容管理",
+		"children": [{
+			"state": "open",
+			"attributes": {
+				"url": "mall_shop/list"
+			},
+			"id": 3371,
+			"text": "商城店铺管理"
+		}, {
+			"state": "open",
+			"attributes": {
+				"url": "t_mall/list"
+			},
+			"id": 3378,
+			"text": "商城管理"
+		}, {
+			"state": "open",
+			"attributes": {
+				"url": "mall_brand/list"
+			},
+			"id": 3373,
+			"text": "品牌管理"
+		}, {
+			"state": "open",
+			"attributes": {
+				"url": "mall_brand_category/list"
+			},
+			"id": 3384,
+			"text": "品牌分类管理"
+		}, {
+			"state": "open",
+			"attributes": {
+				"url": "cms_brand_page/list"
+			},
+			"id": 3379,
+			"text": "品牌馆首页"
+		}, {
+			"state": "open",
+			"attributes": {
+				"url": "mall_operating_category/list"
+			},
+			"id": 3380,
+			"text": "经营品类管理"
+		}, {
+			"state": "open",
+			"attributes": {
+				"url": "cms_link/list"
+			},
+			"id": 3383,
+			"text": "链接位置维护"
+		}]
+	}, {
+		"parentId": 140,
+		"state": "open",
+		"attributes": {},
+		"id": 138580,
+		"text": "商品管理",
+		"children": [{
+			"state": "open",
+			"attributes": {
+				"url": "/mall_product/list"
+			},
+			"id": 3377,
+			"text": "商场商品"
+		}, {
+			"state": "open",
+			"attributes": {
+				"url": "product_mall/release"
+			},
+			"id": 3386,
+			"text": "发布商品"
+		}]
+	}, {
+		"parentId": 140,
+		"state": "open",
+		"attributes": {},
+		"id": 138650,
+		"text": "系统设置",
+		"children": [{
+			"state": "open",
+			"attributes": {
+				"url": "system/sys_standard_list"
+			},
+			"id": 3387,
+			"text": "数据字典"
+		}]
+	}]
+}]

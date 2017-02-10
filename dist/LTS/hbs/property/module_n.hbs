@@ -1,0 +1,14 @@
+{{#params-expression "isDaterange=true"}}
+  {{::callBlockHandle "header" this}}
+{{/params-expression}}
+{{::initArray this "list" 4}}
+{{#eachArray list this}}
+    {{#params-expression "this=@value" "isDeletable=true" "i=@i" "index=@index" "isGroup=true"}}
+      {{::callBlockHandle "image-link" this}}
+    {{/params-expression}}
+{{/eachArray}}
+{{#compare list.length "<" 12}}
+<div class="form-group p-t-md text-center">
+	<a href="javascript:;" class="btn btn-s-md btn-default btn-info" data-group-name="list" data-action="addItem" rel="tooltip" title="" data-original-title="添加图片"><i class="fa fa-plus"></i></a>
+</div>
+{{/compare}}

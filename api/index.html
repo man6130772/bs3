@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>框架结构 - bootstrap3-1.0.0框架使用文档</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u6846\u67b6\u7ed3\u6784";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> bootstrap3-1.0.0框架使用文档</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">框架结构</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#css">css目录</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#fonts">fonts目录</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#js">js目录</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#html">html页面</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_1">框架说明</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="start/">起步使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="css/">css组件使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="js/">js组件使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="components/">第三方组件API</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">bootstrap3-1.0.0框架使用文档</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>框架结构</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="css">css目录</h3>
+<ul>
+<li>app.css : bootstrap框架及字体及动画样式</li>
+<li>base.css : 公共全局样式及第三方组件样式</li>
+<li>login.css : 登录页样式</li>
+</ul>
+<h3 id="fonts">fonts目录</h3>
+<ul>
+<li>opensans目录 : opensans字体</li>
+<li>fontawesome* : fontawesome字体图标</li>
+<li>glyphicons* : bootstrap自带的glyphicons字体图标</li>
+<li>icon* : icon字体图标</li>
+</ul>
+<h3 id="js">js目录</h3>
+<ul>
+<li>boot.js : 框架初始化js文件</li>
+<li>base.js : 左侧菜单组件及全局事件</li>
+<li>components.js : 常用第三方组件（树形treeview及扩展、警告框bootbox、消息通知notify、下拉选择列表select、滚动条slimscroll、加载中waitingfor）</li>
+</ul>
+<h3 id="html">html页面</h3>
+<ul>
+<li><a href="./../app/blank.html">blank.html</a> : 空白页（可作为基础开发页面）</li>
+<li><a href="./../app/category.html">category.html</a> : 分类列表页（左侧树状，右边可拖拽的列表）</li>
+<li><a href="./../app/column-form.html">column-form.html</a> : 多列表单页（一行显示多个表单项，可用于弹出框的表单或内容较多的表单）</li>
+<li><a href="./../app/detail.html">detail.html</a> : 详细页（数据项的显示及编辑页面）</li>
+<li><a href="./../app/gallery.html">gallery.html</a> : 相册页（多图列表的展示页面）</li>
+<li><a href="./../app/index.html">index.html</a> : 首页 （模板项目的首页）</li>
+<li><a href="./../app/list-simple.html">list-simple.html</a> : 简单列表页（用于日常开发的搜索及数据表格展示页）</li>
+<li><a href="./../app/list.html">list.html</a> : 复杂列表页（复杂数据表格的展示页）</li>
+<li><a href="./../app/login.html">login.html</a> : 登录页（模板登录页）</li>
+<li><a href="./../app/modules.html">modules.html</a> : 模块管理页（复杂布局及标签页及各种弹出选择的页）</li>
+<li><a href="./../app/scroll-form.html">scroll-form.html</a> : 滚动表单页（一行一个表单项的长表单页，顶部可自动高亮显示当前表单的定位）</li>
+<li><a href="./../app/table-edit.html">table-edit.html</a> : 表格编辑状态页（数据表格编辑的formatter演示）</li>
+<li><a href="./../app/validator.html">validator.html</a> : 表单验证页（表单校验插件的演示页）</li>
+</ul>
+<h3 id="_1">框架说明</h3>
+<ol>
+<li>目前模板页面每个页面都是独立的，需要刷新整个页面的，这样是为了性能考虑，
+以前包括easyui那种页面里tab标签形式，实际是开了很多个iframe，开几个页面之后，cpu就会占用很高，
+因此这种方式早就开始被淘汰了，各大网站后台包括淘宝等都没有采用的，浏览器自带了标签页也会对资源进行缓存；</li>
+<li>项目里需要根据空白页<code>blank.html</code>分离出头部、左部、底部为共通的文件，模板文件都是静态页面，没有做分离处理；</li>
+<li>基础页面也可以以空白页<code>blank.html</code>为基础进行开发;</li>
+<li>模板页面里使用的css、js、fonts已经放到了开发环境和生产环境，可按上面的使用方法去引用，在项目里配置好该框架的资源路径；</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="start/" class="btn btn-neutral float-right" title="起步使用">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="start/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.1
+Build Date UTC : 2017-02-10 07:37:00
+-->

@@ -1,0 +1,39 @@
+<div class="line b-b line-lg pull-in"></div>
+{{#if isGroup}}
+<form data-group-name="list" data-group-index="{{i}}" class="module-form">
+{{/if}}
+
+
+<div class="form-group">
+   <div class="col-sm-12 bg-light padder-v-sm">
+      {{#if isDeletable}}
+        <a {{::href}} class="btn btn-rounded btn-icon btn-xs btn-default pull-right"  data-action="delItem"><i class="fa fa-remove"></i></a>
+      {{/if}}
+      {{#if isNoImage}}
+          <p class="h5">{{itemTitle}}{{index}}</p>
+      {{else}}
+          <p class="h5">图片{{index}} <span class="image-size">参考尺寸(
+          {{::callBlockHandle "getImageSize" i}})</span></p>
+      {{/if}}
+   </div>
+</div>
+{{#if isNoImage}}
+{{else}}
+{{::callBlockHandle "image" this}}
+{{/if}}
+
+{{#if isDaterange}}
+  {{#params-expression "label=起止时间" "name0=subStartTime" "value0=@subStartTime"  "name1=subEndTime"  "value1=@subEndTime"}}
+    {{::callBlockHandle "daterange" this}}
+  {{/params-expression}}
+{{/if}}
+{{#if isTitle}}
+{{#params-expression "label=标题" "name=title" "value=@title" "isRequired=false"}}
+  {{::callBlockHandle "text" this}}
+{{/params-expression}}
+{{/if}}
+{{::callBlockHandle "link" this}}
+
+{{#if isGroup}}
+</form>
+{{/if}}

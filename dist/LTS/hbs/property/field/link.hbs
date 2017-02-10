@@ -1,0 +1,22 @@
+{{::setDefaultLinkType this}}
+
+{{#params-expression "label=链接位置" "name=linkType" "value=@linkType" "list=::getLinkTypeList" "text=::getLinkTypeText"  "defaultText=请选择"}}
+  {{::callBlockHandle "select" this}}
+{{/params-expression}}
+{{!品牌页面、分类页面、页面列表、商品列表页、商品详情页、热门关键字、无跳转}}
+{{#compare linkType "==" "7" }}
+   
+{{else compare linkType "isEmpty" }}
+
+{{else}}
+<div class="form-group">
+    <label class="col-sm-4 control-label">&nbsp;</label>
+    <div class="col-sm-8">
+      <input type="hidden" name="linkId"  value="{{linkId}}" />
+      <div class="input-group">
+        <input type="text" class="form-control"  name="linkName"  value="{{linkName}}" readonly data-required="true"/> 
+        <span class="input-group-btn"><button class="btn btn-default" type="button" data-role="linkSelected">选择</button> </span>
+      </div>
+    </div>
+</div>    
+{{/compare}}

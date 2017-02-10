@@ -1,0 +1,18 @@
+{{::initArray this "list" 3}}
+{{::arrayToIndexItem this.list}}
+<div class="module-box table-box {{layout}}" style="{{::getHeight height}}">
+<div class="box-cell">
+    <div class="cell-h-50 p-b-xs">
+        {{::callBlockHandle "image" list.item0}}
+    </div>
+    <div class="table-box">
+        <div class="box-cell cell-h-50 cell-w-50 p-r-xs">
+        {{::callBlockHandle "image" list.item1}}
+        </div>
+        <div class="box-cell cell-h-50 cell-w-50">
+            {{::callBlockHandle "image" list.item2}}
+        </div>
+    </div>
+</div>
+</div>
+{{::callBlockHandle "footer" this}}

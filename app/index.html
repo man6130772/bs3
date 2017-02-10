@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="app no-touch">
+
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
+</head>
+
+<body class="">
+    <section class="vbox">
+        <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
+            <div class="navbar-header aside-md">
+                <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
+                <a href="index.html" class="navbar-brand"> <img src="http://172.17.210.82/ocp/images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
+                <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user"> <i class="fa fa-cog"></i> </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+                <li class="hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="i i-chat3"></i> <span class="badge badge-sm up bg-danger count">2</span> </a>
+                    <section class="dropdown-menu aside-xl animated flipInY">
+                        <section class="panel bg-white">
+                            <div class="panel-heading b-light bg-light"> <strong>你有<span class="count">2</span> 个新通知</strong> </div>
+                            <div class="list-group list-group-alt">
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span>                                    </a>
+                                <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0版本发布<br> <small class="text-muted">1小时前</small> </span> </a>
+                            </div>
+                            <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </div>
+                        </section>
+                    </section>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
+                    <ul class="dropdown-menu animated fadeInRight">
+                        <li> <span class="arrow top"></span> <a href="#">系统设置</a> </li>
+                        <li> <a href="#">资料修改</a> </li>
+                        <li>
+                            <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息</a>
+                        </li>
+                        <li> <a href="#">帮助</a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="login.html" data-toggle="ajaxModal">退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <section class="hbox stretch">
+                <!-- .aside -->
+                <aside class="bg-light dker aside-md hidden-print hidden-xs sidebar" id="nav">
+                    <section class="vbox">
+                        <section class="w-f scrollable">
+                            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                                <div class="clearfix wrapper dk nav-user hidden-xs">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="thumb avatar pull-left m-r">
+                                                <img src="http://172.17.210.82/ocp/images/avatar/a0.png" class="dker" alt="..."> 
+                                                <i class="on md b-black"></i>
+                                            </span>
+                                            <span class="hidden-nav-xs clear">
+                                                <span class="block m-t-xs">
+                                                    <strong class="font-bold text-lt">维森莫</strong>
+                                                    <b class="caret"></b>
+                                                </span>
+                                            <span class="text-muted text-xs block">超级管理员</span>
+                                            </span>
+                                        </a>
+                                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                            <li> <span class="arrow top hidden-nav-xs"></span> <a href="#">系统设置</a> </li>
+                                            <li> <a href="#">资料修改</a> </li>
+                                            <li>
+                                                <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息 </a>
+                                            </li>
+                                            <li> <a href="#">帮助</a> </li>
+                                            <li class="divider"></li>
+                                            <li> <a href="login.html" data-toggle="ajaxModal">退出</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- user -->
+                                <nav id="sideNav" class="nav-primary hidden-xs">
+                                </nav>
+                                <!-- nav -->
+                            </div>
+                        </section>
+                        <footer class="footer hidden-xs no-padder dk text-center-nav-xs">
+                            <a rel="tooltip" title="退出" href="login.html" data-toggle="ajaxModal" class="btn btn-icon btn-inactive text-black pull-right m-l-xs m-r-xs hidden-nav-xs"> <i class="i i-logout"></i> </a>
+                            <a id="sideNavSwitch" rel="tooltip" title="收缩" href="#nav" data-toggle="class:nav-xs" class="btn btn-icon btn-inactive text-black m-l-xs m-r-xs"> <i class="i i-circleleft text"></i> <i class="i i-circleright text-active"></i> </a>
+                        </footer>
+                    </section>
+                </aside>
+                <!-- /.aside -->
+                <section id="content">
+                    <section class="vbox">
+                        <section class="scrollable padder">
+                            <section class="row m-b-md">
+                                <div class="col-sm-6">
+                                    <h3 class="m-b-xs text-black">控制台首页</h3> <small>欢迎回来, 维森莫·拉莫帅, <i class="fa fa-map-marker fa-lg text-primary"></i> 172.17.216.37</small>
+                                </div>
+                                <div class="col-sm-6 text-right text-left-xs m-t-md">
+                                    <a href="#nav, #sidebar" class="btn btn-icon b-2x btn-info btn-rounded" data-toggle="class:nav-xs, show"><i class="fa fa-bars"></i></a>
+                                </div>
+                            </section>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="panel b-a">
+                                        <div class="row m-n">
+                                            <div class="col-md-6 b-b b-r">
+                                                <a href="#" class="block padder-v hover">
+                                                    <span class="i-s i-s-2x pull-left m-r-sm"> <i class="i i-hexagon2 i-s-base text-danger hover-rotate"></i> <i class="i i-plus2 i-1x text-white"></i> </span>
+                                                    <span class="clear"> <span class="h3 block m-t-xs text-danger">2,000 <span class="text-sm">个</span></span> <small class="text-muted text-u-c">新会员</small> </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 b-b">
+                                                <a href="#" class="block padder-v hover">
+                                                    <span class="i-s i-s-2x pull-left m-r-sm"> <i class="i i-hexagon2 i-s-base text-success-lt hover-rotate"></i> <i class="i i-users2 i-sm text-white"></i> </span>
+                                                    <span class="clear"> <span class="h3 block m-t-xs text-success">3000 <span class="text-sm">个</span></span> <small class="text-muted text-u-c">商品</small></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 b-b b-r">
+                                                <a href="#" class="block padder-v hover">
+                                                    <span class="i-s i-s-2x pull-left m-r-sm"> <i class="i i-hexagon2 i-s-base text-info hover-rotate"></i> <i class="i i-location i-sm text-white"></i> </span>
+                                                    <span class="clear"> <span class="h3 block m-t-xs text-info">25 <span class="text-sm">个</span></span> <small class="text-muted text-u-c">活动</small> </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 b-b">
+                                                <a href="#" class="block padder-v hover"> <span class="i-s i-s-2x pull-left m-r-sm"> <i class="i i-hexagon2 i-s-base text-primary hover-rotate"></i> <i class="i i-alarm i-sm text-white"></i> </span> <span class="clear"> <span class="h3 block m-t-xs text-primary">30 <span class="text-sm">个</span></span>
+                                                    <small class="text-muted text-u-c">秒杀商品</small> </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="panel b-a">
+                                        <div class="panel-heading no-border bg-primary lt text-center">
+                                            <a href="#">
+                                                <i class="fa fa-3x m-t m-b text-white">男装</i>
+                                            </a>
+                                        </div>
+                                        <div class="padder-v text-center clearfix">
+                                            <div class="col-xs-6 b-r">
+                                                <div class="h3 font-bold">12</div> <small class="text-muted">分类</small> </div>
+                                            <div class="col-xs-6">
+                                                <div class="h3 font-bold">900</div> <small class="text-muted">商品</small> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="panel b-a">
+                                        <div class="panel-heading no-border bg-info lter text-center">
+                                            <a href="#">
+                                                <i class="fa fa-3x m-t m-b text-white">女装</i>
+                                            </a>
+                                        </div>
+                                        <div class="padder-v text-center clearfix">
+                                            <div class="col-xs-6 b-r">
+                                                <div class="h3 font-bold">27</div> <small class="text-muted">分类</small> </div>
+                                            <div class="col-xs-6">
+                                                <div class="h3 font-bold">1500</div> <small class="text-muted">商品</small> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 hide">
+                                    <section class="panel b-a">
+                                        <header class="panel-heading b-b b-light">
+                                            <ul class="nav nav-pills pull-right">
+                                                <li>
+                                                    <a href="ajax.pie.html" class="text-muted" data-bjax data-target="#b-c"> <i class="i i-cycle"></i> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="panel-toggle text-muted"> <i class="i i-plus text-active"></i> <i class="i i-minus text"></i> </a>
+                                                </li>
+                                            </ul> Connection </header>
+                                        <div class="panel-body text-center bg-light lter" id="b-c">
+                                            <div class="easypiechart inline m-b m-t" data-percent="60" data-line-width="4" data-bar-Color="#23aa8c" data-track-Color="#c5d1da" data-color="#2a3844" data-scale-Color="false" data-size="120" data-line-cap='butt' data-animate="2000">
+                                                <div> <span class="h2 m-l-sm step"></span>%
+                                                    <div class="text text-xs">completed</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <section class="panel b-a">
+                                        <div class="panel-heading b-b">
+                                            <a href="#" class="badge pull-right">12</a> <span class="label bg-success"></span>
+                                            <a href="#" class="font-bold">最新活动</a>
+                                        </div>
+                                        <ul class="list-group list-group-lg no-bg auto">
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a4.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>促销活动名称活动名称</span>
+                                                <small class="text-muted clear text-ellipsis">2016.07.10-2016.07.20</small>
+                                                </span>
+                                            </a>
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a3.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>促销活动名称活动名称促销活动</span>
+                                                <small class="text-muted clear text-ellipsis">2016.07.12-2016.07.16</small>
+                                                </span>
+                                            </a>
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a2.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>促销活动名称活动名称促销活动名称活动名称</span>
+                                                <small class="text-muted clear text-ellipsis">2016.07.18-2016.07.25</small>
+                                                </span>
+                                            </a>
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a1.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>促销活动名称活动名称</span>
+                                                <small class="text-muted clear text-ellipsis">2016.07.20-2016.07.30</small>
+                                                </span>
+                                            </a>
+                                        </ul>
+                                    </section>
+                                </div>
+                                <div class="col-md-6">
+                                    <section class="panel b-a">
+                                        <div class="panel-heading b-b">
+                                            <a href="#" class="badge bg-warning pull-right">10</a> <a href="#" class="font-bold">热销产品</a>
+                                        </div>
+                                        <ul class="list-group list-group-lg no-bg auto">
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a4.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>热销产品名称热销产品名称热销产品名称</span>
+                                                <small class="text-muted clear text-ellipsis">产品分类</small>
+                                                </span>
+                                            </a>
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a3.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>热销产品名称热销产品名称热销</span>
+                                                <small class="text-muted clear text-ellipsis">产品分类</small>
+                                                </span>
+                                            </a>
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a2.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>热销产品名称热销产品名称热销产品</span>
+                                                <small class="text-muted clear text-ellipsis">产品分类</small>
+                                                </span>
+                                            </a>
+                                            <a href="#" class="list-group-item clearfix">
+                                                <span class="pull-left thumb-sm avatar m-r"> <img src="http://172.17.210.82/ocp/images/avatar/a1.png" alt="..."></span>
+                                                <span class="clear">
+                                                    <span>热销产品名称热销产品名称热销产品名称</span>
+                                                <small class="text-muted clear text-ellipsis">产品分类</small>
+                                                </span>
+                                            </a>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- side content -->
+                    </section>
+                    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script>
+        // 配置信息一定要放在boot.js上面，
+        // 所有js引用和代码放在页面底部
+        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var BasePath = './';
+    </script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+    <script>
+        $(function() {
+            /**
+             * init sideNav
+             * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
+             */
+            $('#sideNav').sideNav({
+                url: BasePath + 'json/left_tree.json'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

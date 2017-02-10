@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统-模块预览</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- light7框架样式 -->
+    <link rel="stylesheet" href="//devstatic.qxclub.cn/lg7/1.0.1/css/ui.min.css">
+    <!-- <link rel="stylesheet" href="http://s.belle.net.cn/lg7/1.0.1/css/ui.min.css" /> -->
+    <!-- 模块布局样式 -->
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/lts.css" />
+    <!-- 轮播图样式 -->
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/swiper/swiper.min.css">
+    <base target="_blank" />
+</head>
+
+<body class="">
+    <div class="page page-current">
+        <div class="content">
+            <!-- 模块布局 -->
+            <div id="renderView" class="module-preview"></div>
+        </div>
+    </div>
+
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/libs/jquery.min.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/swiper/swiper.jquery.umd.min.js"></script>
+
+    <!-- dev
+     -->
+    <script src="LTS/dev/preview.dev.js"></script>
+    <script src="LTS/dev/tpls/all.js"></script>
+
+    <!-- product
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/lts/app.preview.bundle.min.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/lts/all.tpls.preview.bundle.min.js"></script>
+     -->
+
+    <script type="text/javascript">
+    <!--
+    var getParam = (function() {
+        var args = window.location.href.split('?');
+
+        for (var i = 1; i < args.length; i++) {
+            var a = args[i];
+            var array = a.split('=');
+            args[array[0]] = array[1];
+        }
+        return function(key) {
+            return decodeURIComponent(args[key] || '');
+        };
+    })();
+
+    var data;
+
+    if (getParam('data')) {
+        data = JSON.parse(getParam('data') || '[]');
+    } else {
+        data = [{
+            "id": "2c9157e2567263f401567263f4fc0002",
+            "templateId": "2c9157e2567263f401567263f4f70000",
+            "seq": 0,
+            "name": "123",
+            "layout": "module_l_1_1",
+            "margin": false,
+            "height": 100,
+            "startTime": "2016-08-10 00:00:00",
+            "endTime": null,
+            "createUser": null,
+            "createTime": null,
+            "updateUser": null,
+            "updateTime": null,
+            "list": [{
+                "id": "2c9157e2567263f401567263f4fc0003",
+                "seq": 0,
+                "moduleId": "2c9157e2567263f401567263f4fc0002",
+                "title": null,
+                "imageSrc": "images/photo/p1.jpg",
+                "linkType": 7,
+                "pageId": null,
+                "link": null,
+                "productNo": null,
+                "productName": null,
+                "subStartTime": null,
+                "subEndTime": null,
+                "createUser": null,
+                "createTime": null,
+                "updateUser": null,
+                "updateTime": null,
+                "categoryNoList": null,
+                "categoryNameList": null,
+                "cmsModuleCategoryList": null,
+                "linkId": null,
+                "linkName": null
+            }]
+        }, {
+            "name": "模块1",
+            "height": "200",
+            "margin": "true",
+            "list": [{
+                "seq": "0",
+                "imageSrc": "images/photo/p1.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-07-27 0:00:00",
+                "linkType": "1",
+                "pageName": "品牌页面1",
+                "pageId": "1"
+            }, {
+                "seq": "1",
+                "imageSrc": "images/photo/p2.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-08-07 0:00:00",
+                "linkType": "2",
+                "categoryNoList": "1",
+                "categoryNameList": "分类1"
+            }, {
+                "seq": "2",
+                "imageSrc": "images/photo/p3.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-08-07 0:00:00",
+                "linkType": "3",
+                "pageName": "页面1",
+                "pageId": "1"
+            }],
+            "layout": "slides",
+            "seq": 1
+        }, {
+            "name": "模块1",
+            "height": "75",
+            "margin": "true",
+            "list": [{
+                "seq": "0",
+                "imageSrc": "images/photo/p1.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-07-27 0:00:00",
+                "linkType": "1",
+                "pageName": "品牌页面1",
+                "pageId": "1"
+            }, {
+                "seq": "1",
+                "imageSrc": "images/photo/p2.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-08-07 0:00:00",
+                "linkType": "2",
+                "categoryNoList": "1",
+                "categoryNameList": "分类1"
+            }, {
+                "seq": "2",
+                "imageSrc": "images/photo/p3.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-08-07 0:00:00",
+                "linkType": "3",
+                "pageName": "页面1",
+                "pageId": "1"
+            }, {
+                "seq": "2",
+                "imageSrc": "images/photo/p4.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-08-07 0:00:00",
+                "linkType": "3",
+                "pageName": "页面1",
+                "pageId": "1"
+            }, {
+                "seq": "2",
+                "imageSrc": "images/photo/p5.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-08-07 0:00:00",
+                "linkType": "3",
+                "pageName": "页面1",
+                "pageId": "1"
+            }, {
+                "seq": "2",
+                "imageSrc": "images/photo/p6.jpg",
+                "subStartTime": "2016-07-27 0:00:00",
+                "subEndTime": "2016-08-07 0:00:00",
+                "linkType": "3",
+                "pageName": "页面1",
+                "pageId": "1"
+            }],
+            "layout": "module_n",
+            "seq": 1
+        },{
+            "name": "模块2",
+            "startTime": "2015-09-12 00:00:00",
+            "endTime": "",
+            "height": "80",
+            "margin": "false",
+            "list": [{
+                "seq": "0",
+                "imageSrc": "images/photo/p4.jpg",
+                "linkType": "1",
+                "pageName": "品牌页面2",
+                "pageId": "2"
+            }, {
+                "seq": "1",
+                "imageSrc": "images/photo/p5.jpg",
+                "linkType": "2",
+                "categoryNoList": "1",
+                "categoryNameList": "分类1"
+            }, {
+                "seq": "2",
+                "imageSrc": "images/photo/p6.jpg",
+                "linkType": "3",
+                "pageName": "页面1",
+                "pageId": "1"
+            }, {
+                "seq": "3",
+                "imageSrc": "images/photo/p7.jpg",
+                "linkType": "4",
+                "pageName": "商品页面1",
+                "pageId": "1"
+            }],
+            "layout": "recommend",
+            "seq": 2
+        }, {
+            "name": "模块3",
+            "startTime": "2015-09-12 00:00:00",
+            "endTime": "",
+            "height": "100",
+            "margin": "false",
+            "list": [{
+                "imageSrc": "images/photo/p9.jpg",
+                "linkType": "6",
+                "pageName": "搜索字2",
+                "pageId": "2"
+            }],
+            "layout": "module_l_1_1",
+            "seq": 3
+        }, {
+            "name": "xxx",
+            "startTime": "",
+            "endTime": "",
+            "height": "300",
+            "margin": "false",
+            "list": [{
+                "imageSrc": "upload_955604325e45ad57e885cb7e777e42bf.jpg",
+                "linkType": "7"
+            }, {
+                "imageSrc": "upload_ce7e1311cc1e128cf969d29cb61090dd.jpg",
+                "linkType": "7"
+            }, {
+                "imageSrc": "upload_9d365842f608fd7ecce9a94cfb4c8498.jpg",
+                "linkType": "7"
+            }],
+            "layout": "module_l_1_2",
+            "seq": 4
+        }, {
+            "name": "11",
+            "startTime": "",
+            "endTime": "",
+            "height": "230",
+            "margin": "false",
+            "list": [{
+                "imageSrc": "upload_fabfc7fb923f4fe264c0920bed9e8d6a.jpg",
+                "linkType": "7"
+            }],
+            "layout": "module_l1",
+            "seq": 5
+        }, {
+            "name": "xxx",
+            "startTime": "",
+            "endTime": "",
+            "height": "300",
+            "margin": "false",
+            "list": [{
+                "imageSrc": "upload_ef4b003cf64daf8d722c9af0aab49128.jpg",
+                "linkType": "7"
+            }, {
+                "imageSrc": "upload_54024ba12fe60e5ea44c00e78021d36b.jpg",
+                "linkType": "7"
+            }],
+            "layout": "module_l2",
+            "seq": 6
+        }, {
+            "name": "xxx",
+            "startTime": "",
+            "endTime": "",
+            "height": "200",
+            "margin": "false",
+            "list": [{
+                "imageSrc": "upload_579ea8c83bc8c96b5f4c23e2bdb41e11.jpg",
+                "linkType": "7"
+            }, {
+                "imageSrc": "upload_64e3cd1e43086ee82507a2aa67e301fb.jpg",
+                "linkType": "7"
+            }, {
+                "imageSrc": "upload_6b7517019b9053939d511c971c39175b.jpg",
+                "linkType": "7"
+            }],
+            "layout": "module_l3",
+            "seq": 7
+        }];
+    };
+
+
+    /*
+        var $canvas = $('#qrcodeCanvas');
+        $canvas.empty();
+        $canvas.qrcode({
+            width: 256,
+            height: 256,
+            text: window.location.href
+        });
+    */
+    (function(factory) {
+        window.App ? factory(window.App) : window.initApp = factory;
+    })(function(App) {
+        var helper = App.helper;
+
+        helper.defaultImageSrc = "http://172.17.210.82/ocp/images/photo/p1.jpg";
+        helper.imageServer = 'http://172.17.205.67:8901/tmp/';
+
+        App.init({
+            render: $('#renderView'),
+            getHTML: function(html) {
+                return '<section class="module">' + html + '</section>';
+            },
+            ready: function() {
+
+                var swiper = new Swiper('.swiper-container.carousel', {
+                    pagination: '.swiper-pagination',
+                    autoplay: 1500,
+                    autoplayDisableOnInteraction: false,
+                    paginationClickable: true
+                });
+
+
+                var swiper = new Swiper('.swiper-container.list', {
+                    slidesPerView: 4,
+                    paginationClickable: true,
+                    spaceBetween: 5
+                });
+            },
+            data: data
+        });
+    });
+    //-->
+    </script>
+</body>
+
+</html>

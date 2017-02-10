@@ -1,0 +1,9 @@
+site_name: bootstrap3-1.0.0框架使用文档
+pages:
+    - 框架结构: index.md
+    - 起步使用: start.md
+    - css组件使用: css.md
+    - js组件使用: js.md
+    - 第三方组件API: components.md
+theme: readthedocs
+site_dir: api

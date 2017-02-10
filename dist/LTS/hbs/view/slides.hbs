@@ -1,0 +1,23 @@
+<div class="module-box swiper-container carousel" style="{{::getHeight height}}" >
+	{{#if_design_mode}}
+	    {{::initArray this "list" 1}}
+	    {{::arrayToIndexItem list}}
+		<div class="item">
+		{{::callBlockHandle "image" list.item0}}
+		</div>
+	{{else}}
+		{{::initArray this "list" 3}}
+		<div class="swiper-wrapper"  style="{{::getHeight height}}" >
+		{{#eachArray list this}}
+			<div class="swiper-slide item">
+			{{::callBlockHandle "image" value}}
+			</div>
+		{{/eachArray}}
+		</div>
+		<div class="swiper-pagination">
+		</div>
+	{{/if_design_mode}}
+</div>
+{{::callBlockHandle "footer" this}}
+
+

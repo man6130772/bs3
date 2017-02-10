@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="app no-touch">
+
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" /> -->
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.min.css" type="text/css" />
+</head>
+
+<body class="">
+    <section class="vbox">
+        <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
+            <div class="navbar-header aside-md">
+                <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
+                <a href="index.html" class="navbar-brand"> <img src="http://172.17.210.82/ocp/images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
+                <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user"> <i class="fa fa-cog"></i> </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+                <li class="hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="i i-chat3"></i> <span class="badge badge-sm up bg-danger count">2</span> </a>
+                    <section class="dropdown-menu aside-xl animated flipInY">
+                        <section class="panel bg-white">
+                            <div class="panel-heading b-light bg-light"> <strong>你有<span class="count">2</span> 个新通知</strong> </div>
+                            <div class="list-group list-group-alt">
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
+                                <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0版本发布<br> <small class="text-muted">1小时前</small> </span> </a>
+                            </div>
+                            <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </div>
+                        </section>
+                    </section>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
+                    <ul class="dropdown-menu animated fadeInRight">
+                        <li> <span class="arrow top"></span> <a href="#">系统设置</a> </li>
+                        <li> <a href="#">资料修改</a> </li>
+                        <li>
+                            <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息</a>
+                        </li>
+                        <li> <a href="#">帮助</a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="login.html" data-toggle="ajaxModal">退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <section class="hbox stretch">
+                <!-- .aside -->
+                <aside class="bg-light dker aside-md hidden-print hidden-xs sidebar" id="nav">
+                    <section class="vbox">
+                        <section class="w-f scrollable">
+                            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                                <div class="clearfix wrapper dk nav-user hidden-xs">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="thumb avatar pull-left m-r">
+                                                <img src="http://172.17.210.82/ocp/images/avatar/a0.png" class="dker" alt="..."> 
+                                                <i class="on md b-black"></i>
+                                            </span>
+                                            <span class="hidden-nav-xs clear">
+                                                <span class="block m-t-xs">
+                                                    <strong class="font-bold text-lt">维森莫</strong>
+                                                    <b class="caret"></b>
+                                                </span>
+                                            <span class="text-muted text-xs block">超级管理员</span>
+                                            </span>
+                                        </a>
+                                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                            <li> <span class="arrow top hidden-nav-xs"></span> <a href="#">系统设置</a> </li>
+                                            <li> <a href="#">资料修改</a> </li>
+                                            <li>
+                                                <a href="#"> <span class="badge bg-danger pull-right">3</span> 新信息 </a>
+                                            </li>
+                                            <li> <a href="#">帮助</a> </li>
+                                            <li class="divider"></li>
+                                            <li> <a href="login.html" data-toggle="ajaxModal">退出</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- user -->
+                                <nav id="sideNav" class="nav-primary hidden-xs">
+                                </nav>
+                                <!-- nav -->
+                            </div>
+                        </section>
+                        <footer class="footer hidden-xs no-padder dk text-center-nav-xs">
+                            <a rel="tooltip" title="退出" href="login.html" data-toggle="ajaxModal" class="btn btn-icon btn-inactive text-black pull-right m-l-xs m-r-xs hidden-nav-xs"> <i class="i i-logout"></i> </a>
+                            <a id="sideNavSwitch" rel="tooltip" title="收缩" href="#nav" data-toggle="class:nav-xs" class="btn btn-icon btn-inactive text-black m-l-xs m-r-xs"> <i class="i i-circleleft text"></i> <i class="i i-circleright text-active"></i> </a>
+                        </footer>
+                    </section>
+                </aside>
+                <!-- /.aside -->
+                <section id="content">
+                    <section class="vbox">
+                        <section class="scrollable padder">
+                            <div class="m-b-md">
+                                <h3 class="m-b-none">验证框</h3> </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form data-parsley-validate action="#">
+                                        <section class="panel panel-default">
+                                            <header class="panel-heading"> <span class="h4">注册</span> </header>
+                                            <div class="panel-body">
+                                                <p class="text-muted">请填写列信息：</p>
+                                                <div class="form-group">
+                                                    <label>用户名</label>
+                                                    <input type="text" class="form-control" required> </div>
+                                                <div class="form-group">
+                                                    <label>Email地址</label>
+                                                    <input type="text" class="form-control" data-parsley-type="email" required> </div>
+                                                <div class="form-group pull-in clearfix">
+                                                    <div class="col-sm-6">
+                                                        <label>输入密码</label>
+                                                        <input type="password" class="form-control" required id="pwd"> </div>
+                                                    <div class="col-sm-6">
+                                                        <label>再次输入确认密码</label>
+                                                        <input type="password" class="form-control" data-parsley-equalto="#pwd" required> </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>爱好</label>
+                                                    <div>
+                                                        <label class="checkbox-inline i-checks">
+                                                            <input type="checkbox" name="hobbies" id="hobby1" value="option1"><i></i> 骑车
+                                                        </label>
+                                                        <label class="checkbox-inline i-checks">
+                                                            <input type="checkbox" name="hobbies" id="hobby2" value="option2"><i></i> 跑步
+                                                        </label>
+                                                        <label class="checkbox-inline i-checks">
+                                                            <input type="checkbox" name="hobbies" id="hobby1" value="option3"><i></i> 游泳
+                                                        </label>
+                                                        <label class="checkbox-inline i-checks">
+                                                            <input type="checkbox" name="hobbies" id="hobby2" value="option4"><i></i> 爬山
+                                                        </label>
+                                                        <label class="checkbox-inline i-checks">
+                                                            <input type="checkbox" name="hobbies" id="hobby1" value="option5"><i></i> 冲浪
+                                                        </label>
+                                                        <label class="checkbox-inline i-checks">
+                                                            <input type="checkbox" name="hobbies" id="hobby2" value="option6" data-parsley-check="[1,3]"><i></i> 攀岩
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>手机号码</label>
+                                                    <input type="text" class="form-control" data-parsley-type="phone" placeholder="XXXXXXXX" required>
+                                                </div>
+                                                <div class="checkbox i-checks">
+                                                    <label>
+                                                        <input type="checkbox" name="check" checked required><i></i> 我同意 <a href="#" class="text-info">所有条款</a> </label>
+                                                </div>
+                                            </div>
+                                            <footer class="panel-footer text-right bg-light lter">
+                                                <button type="submit" class="btn btn-success btn-s-xs">提交</button>
+                                            </footer>
+                                        </section>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6">
+                                    <form data-parsley-validate action="#">
+                                        <section class="panel panel-default">
+                                            <header class="panel-heading"> <span class="h4">联系</span> </header>
+                                            <div class="panel-body">
+                                                <p class="text-muted">需要技术支持？请填写以下联系方式：</p>
+                                                <div class="form-group pull-in clearfix">
+                                                    <div class="col-sm-6">
+                                                        <label>你的姓名</label>
+                                                        <input type="text" class="form-control" placeholder="名称" required> </div>
+                                                    <div class="col-sm-6">
+                                                        <label>Email地址</label>
+                                                        <input type="email" data-parsley-type="email" class="form-control" placeholder="输入Email地址" required> </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>个人网站</label>
+                                                    <input type="text" data-parsley-type="url" required class="form-control" placeholder="你的网站url地址">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ajax校验</label>
+                                                    <input type="text" id="ajaxValidate" class="form-control" required data-parsley-remote data-parsley-required-message="ajax校验必填哦" data-parsley-remote-validator="validateAjax" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>信息留言</label>
+                                                    <textarea class="form-control" rows="6" data-parsley-minlength="6" required placeholder="填写你的留言信息"></textarea>
+                                                </div>
+                                            </div>
+                                            <footer class="panel-footer text-right bg-light lter">
+                                                <button type="submit" class="btn btn-success btn-s-xs">提交</button>
+                                            </footer>
+                                        </section>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form class="form-horizontal" data-parsley-validate action="#">
+                                        <section class="panel panel-default">
+                                            <header class="panel-heading"> <strong>基础验证</strong> </header>
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">必填项</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" required placeholder="必填输入框">
+                                                        <select required class="form-control m-t">
+                                                            <option value="">必填下拉框</option>
+                                                            <option value="foo">选项a</option>
+                                                            <option value="bar">选项b</option>
+                                                        </select>
+                                                        <label class="checkbox i-checks">
+                                                            <input type="checkbox" name="inlineCheckbox1" value="option1" required data-parsley-error-message="你必须同意所有条款"><i></i> 同意政策 </label>
+                                                    </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">最小长度输入框</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-minlength="6" required class="form-control" placeholder="最小长度 = 6"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">最大长度输入框</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-maxlength="6" required class="form-control" placeholder="最大长度 = 6"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">长度范围输入框</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-length="[5, 10]" required class="form-control" placeholder="长度范围 = [5,10]"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">最小数值</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-min="6" required class="form-control" placeholder="最小数值 = 6"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">最大数值</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-max="100" required class="form-control" placeholder="最大数值 = 100"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">数值范围</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-range="[6, 100]" required class="form-control" placeholder="数值范围 = [6, 100]"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">正则表达式验证</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-pattern="#[A-Fa-f0-9]{6}" required class="form-control" placeholder="hexa 颜色代码"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">校验码</label>
+                                                    <div class="col-sm-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <input type="text" value="foo" id="foo" class="form-control">
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" data-parsley-equalto="#foo" placeholder="输入左侧校验码" required class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <footer class="panel-footer text-right bg-light lter">
+                                                <button type="submit" class="btn btn-success btn-s-xs">提交</button>
+                                            </footer>
+                                        </section>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6">
+                                    <form class="form-horizontal" data-parsley-validate action="#">
+                                        <section class="panel panel-default">
+                                            <header class="panel-heading"> <strong>类型校验</strong> </header>
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Email地址</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" data-parsley-type="email" required placeholder="Email地址"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Url地址</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-type="url" required class="form-control" placeholder="url地址"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">正整数</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-type="digits" required class="form-control" placeholder="digits"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">浮点</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-type="number" required class="form-control" placeholder="number"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Unicode字符</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-type="alphanum" required class="form-control" placeholder="alphanumeric string"> </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label">手机号码</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" data-parsley-multiple-phone="/^1[3|4|5|7|8]\d{9}$/" required class="form-control" placeholder="XXXXXXXX"> </div>
+                                                </div>
+                                            </div>
+                                            <footer class="panel-footer text-right bg-light lter">
+                                                <button type="submit" class="btn btn-success btn-s-xs">提交</button>
+                                            </footer>
+                                        </section>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">修改链接位置</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form data-parsley-validate class="form-horizontal" id="cmsLinkForm" method="post">
+                                                <input type="hidden" id="t_id" name="id">
+                                                <div class="form-group">
+                                                    <label for="t_link_name" class="col-sm-3 control-label">
+                                                        <span style="color: red;">*</span>链接名称:</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control" id="t_link_name" name="linkName" readonly="readonly" value="百度网"/>
+                                                    </div>
+                                                </div>
+                                                <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                <div class="form-group">
+                                                    <label for="t_link" class="col-sm-3 control-label">
+                                                        <span style="color: red;">*</span>链接地址:</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control" id="t_link" name="link" required/>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                            <button type="button" id="btn_save" class="btn btn-primary">保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+                </section>
+                <!-- content -->
+            </section>
+        </section>
+    </section>
+    <script>
+    // 配置信息一定要放在boot.js上面，
+    // 所有js引用和代码放在页面底部
+    var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+    var BasePath = './';
+    </script>
+    <!-- Boot -->
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/moment.min.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/zh-cn.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/validator/parsley.config.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/validator/parsley.js"></script>
+    <script>
+        var $form = $("#cmsLinkForm").parsley();
+        $("#btn_save").click(function(e){
+            $form.onSubmitValidate(e);
+            // $form.onSubmitButton(e);
+        });
+        $form.on("form:success", function(e){
+            alert("提交成功");
+        });
+        $form.on("form:error", function(e){
+            alert("提交失败");
+        });
+
+        /**
+         * ajax validate
+         */
+        window.Parsley.addAsyncValidator('validateAjax', function (xhr) {
+            var response = xhr.responseText;
+            if(response=="true"){// 这里根据实际情况进行判断
+                return true;
+            }else{
+                return false;
+            }
+            // return 404 === xhr.status;
+        }, 'json/validate.json');// 目前返回false
+    </script>
+
+    <script>
+    $(function() {
+        /**
+         * init sideNav
+         * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
+         */
+        $('#sideNav').sideNav({
+            url: BasePath + 'json/left_tree.json'
+        });
+
+        /**
+         * datetimepicker setting
+         */
+        $('.startDate').datetimepicker({
+            format: 'YYYY-MM-DD H:mm:ss',
+            // defaultDate: moment().format('YYYY-MM-DD H:59:59'),
+            // sideBySide: true,
+            // debug: true,
+            locale: moment.locale('zh-cn')
+        });
+        $('.endDate').datetimepicker({
+            format: 'YYYY-MM-DD H:mm:ss',
+            // defaultDate: moment().format('YYYY-MM-DD H:mm:ss'),
+            // sideBySide: true,
+            // debug: true,
+            locale: moment.locale('zh-cn')
+        });
+        $('.startDate').on("dp.change", function(e) {
+            var rel = $(this).attr('rel');
+            $('.endDate[rel=' + rel + ']').data('DateTimePicker').minDate(e.date);
+        });
+        $('.endDate').on("dp.change", function(e) {
+            var rel = $(this).attr('rel');
+            $('.startDate[rel=' + rel + ']').data('DateTimePicker').maxDate(e.date);
+        });
+
+        /**
+         * modal dialog setting
+         */
+        $('#productModal').on('shown.bs.modal', function(event) {
+            // modal already show
+            var modal = $(this);
+        }).on('hidden.bs.modal', function(event) {
+            // modal already close
+            var modal = $(this);
+        });
+
+
+        /**
+         * other setting
+         */
+        $(window).on("beforeunload", function(e) {
+            var confirmationMessage = '您输入的内容尚未保存，确定离开此页面吗？';
+            return confirmationMessage;
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

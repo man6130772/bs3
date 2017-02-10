@@ -1,0 +1,17 @@
+
+{{::initArray this "list" 2}}
+<div class="module-box module-pro column-count-2 column-gap-xs {{layout}}" data-module-index="{{__index__}}">
+{{#eachArray list this}}
+<div class="item"  data-id="{{value.linkId}}" data-type="{{value.linkType}}" data-item-index="{{i}}">
+	<div class="row-image" style="{{::getHeight parent.height}}">
+		{{::callBlockHandle "image" value}}
+	</div>
+	<div class="row-title">
+		<a class="pro-price item-title" {{#if_design_mode}} {{::href}} {{else}} href="{{::callBlockHandle "getLink" value}}" {{/if_design_mode}}>￥99.99</a>
+		<br/>
+		<a class="pro-title item-title" {{#if_design_mode}} {{::href}} {{else}} href="{{::callBlockHandle "getLink" value}}" {{/if_design_mode}}>商品标题</a>
+	</div>
+</div>
+{{/eachArray}}
+</div>
+{{::callBlockHandle "footer" this}}

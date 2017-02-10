@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>js组件使用 - bootstrap3-1.0.0框架使用文档</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "js\u7ec4\u4ef6\u4f7f\u7528";
+    var mkdocs_page_input_path = "js.md";
+    var mkdocs_page_url = "/js/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> bootstrap3-1.0.0框架使用文档</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">框架结构</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../start/">起步使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../css/">css组件使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">js组件使用</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">左侧菜单插件属性</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">左侧菜单插件使用说明</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#json">左侧菜单json数据属性</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#json_1">左侧菜单json数据说明</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../components/">第三方组件API</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">bootstrap3-1.0.0框架使用文档</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>js组件使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h4 id="_1">左侧菜单插件属性</h4>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th align="center">默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>string</td>
+<td align="center">null</td>
+<td>左侧菜单的远程数据地址，插件会使用异步去加载数据并初始化菜单</td>
+</tr>
+<tr>
+<td>data</td>
+<td>array</td>
+<td align="center">null</td>
+<td>左侧菜单的数据，可以直接指定本地数据</td>
+</tr>
+<tr>
+<td>mini</td>
+<td>boolean</td>
+<td align="center">false</td>
+<td>菜单初始化时的是否折叠起来，默认展开</td>
+</tr>
+<tr>
+<td>afterLoad</td>
+<td>function</td>
+<td align="center"></td>
+<td>菜单初始化完成后的事件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_2">左侧菜单插件使用说明</h4>
+<ol>
+<li>该插件由我们自己开发并构建到了<code>base.js</code>里，可以在审查工具里打开这个文件查看和调试；</li>
+<li>url属性和data属性只需要使用一个，不要同时使用，二者的数据结构一样，参考json文件；</li>
+<li>项目使用时可以下载上面的json模板数据到本地(该文件做了精简)，参考json数据去自己开发左侧数据接口；</li>
+</ol>
+<h4 id="json">左侧菜单json数据属性</h4>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th align="center">目前使用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parentId</td>
+<td>number</td>
+<td align="center">否</td>
+<td>父级的id，根级的parentId为1，子级的parentId为1xx，如110</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td align="center">否</td>
+<td>菜单初始化时的状态"打开/关闭"，值为close或open</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td>object</td>
+<td align="center">是</td>
+<td>当前菜单项的属性，目前里面只有url属性</td>
+</tr>
+<tr>
+<td>url</td>
+<td>object</td>
+<td align="center">是</td>
+<td>attributes的子属性，菜单的链接地址</td>
+</tr>
+<tr>
+<td>id</td>
+<td>number</td>
+<td align="center">是</td>
+<td>菜单的id</td>
+</tr>
+<tr>
+<td>text</td>
+<td>string</td>
+<td align="center">是</td>
+<td>菜单的名称，在页面上显示出来的名称</td>
+</tr>
+</tbody>
+</table>
+<h4 id="json_1">左侧菜单json数据说明</h4>
+<ol>
+<li>"目前使用"是指插件目前是否使用到了该json属性，parentId还有state目前为保留属性，后台需要输出，之后实际可能用到。</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../components/" class="btn btn-neutral float-right" title="第三方组件API">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../css/" class="btn btn-neutral" title="css组件使用"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../css/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../components/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

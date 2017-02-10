@@ -1,0 +1,31 @@
+<div class="form-group image" data-image-size="{{::callBlockHandle "getImageSize" i}}">
+    {{!<label class="col-sm-4 control-label">&nbsp;</label>}}
+    <div class="col-sm-12">
+        <div class="img-full pos-rlt">
+            <!-- <a class="img-mask" href="#"><i class="fa fa-times fa-3x"></i></a> -->
+            <img src="{{::getImageSrc imageSrc }}"/>
+        </div>
+        <div class="progress progress-sm progress-striped hide">
+            <div class="progress-bar bg-info lter" data-role="progressBar" style="width: 1%"></div>
+        </div>
+            
+        <div class="btn-group btn-group-justified">
+            <label  class="btn btn-sm btn-default">
+            <i class="fa fa-cloud-upload text"></i>
+            <span>本地上传</span>
+            <input type="file" class="filestyle" style="position: fixed; left: -500px;" accept="image/jpg,image/jpeg" />
+            </label>
+            <label class="btn btn-sm btn-default selected" data-action="selectedImage">
+            <i class="fa fa-search text"></i>
+            <span>选择图片</span>
+            </label>
+        </div>
+        <input type="hidden" name="imageSrc" value="{{imageSrc}}" />
+        <!-- <button class="btn btn-default btn-block no-radius" id="btn-1" href="#btn-1" data-toggle="class:btn-success">
+            <i class="fa fa-cloud-upload text"></i>
+            <span class="text">修改图片</span>
+            <i class="fa fa-check text-active"></i>
+            <span class="text-active">上传成功</span>
+        </button> -->
+    </div>
+</div>

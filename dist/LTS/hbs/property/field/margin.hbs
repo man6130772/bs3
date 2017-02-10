@@ -1,0 +1,16 @@
+<div class="form-group">
+    <label class="col-sm-4 control-label">模块间距</label>
+    <div class="col-sm-8">
+        {{#compare margin "=="  "true"}}
+            {{::setDataValue this 'checkedM1' "checked"}}
+        {{else}}
+            {{::setDataValue this 'checkedM2' "checked"}}
+        {{/compare}}
+        <label class="radio-inline i-checks">
+            <input type="radio" name="margin" value="true" {{checkedM1}}/><i></i>有
+        </label>
+        <label class="radio-inline i-checks">
+            <input type="radio" name="margin" value="false" {{checkedM2}}/><i></i>无
+        </label>
+    </div>
+</div>

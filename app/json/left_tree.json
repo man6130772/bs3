@@ -1,0 +1,742 @@
+[{
+    "parentId": 1,
+    "state": "open",
+    "attributes": {},
+    "id": 22,
+    "text": "零售-POS",
+    "children": [{
+        "parentId": 1,
+        "state": "open",
+        "attributes": {
+            "url": "index.html"
+        },
+        "id": 21,
+        "text": "控制台首页",
+        "icon": "i i-home"
+    },{
+        "parentId": 2,
+        "state": "open",
+        "attributes": {},
+        "id": 6666,
+        "text": "品牌管理",
+        "icon": "i i-statistics",
+        "children": [{
+            "state": "open",
+            "attributes": {
+                "url": "blank.html"
+            },
+            "id": 510,
+            "text": "空白页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "modules.html"
+            },
+            "id": 47,
+            "text": "模块管理"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list-simple.html"
+            },
+            "id": 510,
+            "text": "简单列表页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 516,
+            "text": "复杂列表页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "table-edit.html"
+            },
+            "id": 700,
+            "text": "表格编辑页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "category.html"
+            },
+            "id": 597,
+            "text": "分类管理页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "gallery.html"
+            },
+            "id": 592,
+            "text": "图片管理页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "detail.html"
+            },
+            "id": 507,
+            "text": "普通表单页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "scroll-form.html"
+            },
+            "id": 702,
+            "text": "滚动表单页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "column-form.html"
+            },
+            "id": 706,
+            "text": "两列表单页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "validator.html"
+            },
+            "id": 566,
+            "text": "表单验证页"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "test/modules.html"
+            },
+            "id": 598,
+            "text": "测试子目录页面1"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "test/detail.html"
+            },
+            "id": 626,
+            "text": "测试子目录页面2"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "http://www.qq.com/"
+            },
+            "id": 628,
+            "text": "外链测试QQ"
+        }]
+    }, {
+        "parentId": 22,
+        "state": "open",
+        "attributes": {},
+        "id": 25,
+        "text": "销售管理",
+        "icon": "i i-bars",
+        "children": [{
+            "parentId": 25,
+            "state": "open",
+            "attributes": {},
+            "id": 4916,
+            "text": "X销售业务",
+            "children": [{
+                "parentId": 99,
+                "state": "open",
+                "attributes": {},
+                "id": 999,
+                "text": "ZJ自建测试",
+                "children":[{
+                    "state": "open",
+                    "attributes": {
+                        "url": "test/gh/modules.html"
+                    },
+                    "id": 9999,
+                    "text": "ZJ自建测试1"
+                }, {
+                    "state": "open",
+                    "attributes": {
+                        "url": "test/gh/detail.html"
+                    },
+                    "id": 99999,
+                    "text": "ZJ自建测试2"
+                }]
+            },{
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 236,
+                "text": "XS销售订单"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 229,
+                "text": "TH退换货"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 220,
+                "text": "NG内购订单"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 213,
+                "text": "DT待提货订单"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 53,
+                "text": "XS销售订单管理"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 58,
+                "text": "XS销售日结"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 214,
+                "text": "RB日报查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 46,
+                "text": "RX日销售初始化"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 707,
+                "text": "DM特卖订单"
+            }]
+        }, {
+            "parentId": 25,
+            "state": "open",
+            "attributes": {},
+            "id": 28,
+            "text": "J基础查询",
+            "children": [{
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 227,
+                "text": "KC库存价格查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 845,
+                "text": "DP店铺价格查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 831,
+                "text": "DP店铺促销价格查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 217,
+                "text": "SP商品资料查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 215,
+                "text": "CX促销活动查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 393,
+                "text": "HY会员信息查询"
+            }]
+        }]
+    }, {
+        "parentId": 22,
+        "state": "open",
+        "attributes": {},
+        "id": 29,
+        "text": "货品管理",
+        "icon": "i i-grid3",
+        "children": [{
+            "parentId": 29,
+            "state": "open",
+            "attributes": {},
+            "id": 335,
+            "text": "S收货管理",
+            "children": [{
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 239,
+                "text": "MD门店验货"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 689,
+                "text": "MD门店验货(后台资讯)"
+            }]
+        }, {
+            "parentId": 29,
+            "state": "open",
+            "attributes": {},
+            "id": 336,
+            "text": "FH发货管理",
+            "children": [{
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 237,
+                "text": "DH调货通知单"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 690,
+                "text": "DH调货通知单(后台资讯)"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 881,
+                "text": "TZ通知单查询(本店收)"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 226,
+                "text": "D店转货"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 691,
+                "text": "DZ店转货(后台资讯)"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 221,
+                "text": "DT店退残"
+            }]
+        }, {
+            "parentId": 29,
+            "state": "open",
+            "attributes": {},
+            "id": 330,
+            "text": "PD盘点管理",
+            "children": [{
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 65,
+                "text": "PD盘点单"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 231,
+                "text": "YP预盘差分析"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 218,
+                "text": "PC盘差单查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 705,
+                "text": "MD门店盘点单确认"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 856,
+                "text": "MD门店盘点单查询"
+            }, {
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 880,
+                "text": "YP预盘差分析(分类)"
+            }]
+        }, {
+            "parentId": 29,
+            "state": "open",
+            "attributes": {},
+            "id": 510,
+            "text": "J交接管理",
+            "children": [{
+                "state": "open",
+                "attributes": {
+                    "url": "list.html"
+                },
+                "id": 511,
+                "text": "JJ交接查询"
+            }]
+        }]
+    }, {
+        "parentId": 22,
+        "state": "open",
+        "attributes": {},
+        "id": 318,
+        "text": "门店账务",
+        "icon": "i i-data",
+        "children": [{
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 240,
+            "text": "XJ现金存入"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 225,
+            "text": "YS预收款单"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 233,
+            "text": "FP发票登记"
+        }]
+    }, {
+        "parentId": 22,
+        "state": "open",
+        "attributes": {},
+        "id": 4895,
+        "text": "辅助功能",
+        "icon": "i i-params",
+        "children": [{
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 47,
+            "text": "WX维修单"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 507,
+            "text": "RJ日结前改单"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 510,
+            "text": "RJ日结后改单"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 597,
+            "text": "CY差异申请单"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 700,
+            "text": "KS可售不可售调整"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 598,
+            "text": "DP店铺目标设置"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 616,
+            "text": "DP店铺调货单导入"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 628,
+            "text": "YS预售登记"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 629,
+            "text": "DP店铺资产登记"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 672,
+            "text": "YY营业员档案维护"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 687,
+            "text": "RS日商场排名"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 708,
+            "text": "TM特卖备货"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 713,
+            "text": "KQ考勤签到"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 714,
+            "text": "KQ考勤记录"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 844,
+            "text": "XS销售记账异常处理"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 875,
+            "text": "XS销售提货日期调整"
+        }]
+    }, {
+        "parentId": 22,
+        "state": "open",
+        "attributes": {},
+        "id": 27,
+        "text": "报表查询",
+        "icon": "i i-search",
+        "children": [{
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 633,
+            "text": "MD门店库存按天变动"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 525,
+            "text": "SH收货查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 590,
+            "text": "FH发货查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 528,
+            "text": "JS结算活动查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 530,
+            "text": "CP产品销售排行榜"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 531,
+            "text": "SK收款分类汇总"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 532,
+            "text": "SP商品销存查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 534,
+            "text": "YY营业员营业收入汇总"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 536,
+            "text": "CY差异报告查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 537,
+            "text": "SP商品销售明细查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 645,
+            "text": "YF月份销售日报表(ADG)"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 697,
+            "text": "SP商品进出明细查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 698,
+            "text": "DZ店长调价汇总"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 710,
+            "text": "XS销售分类汇总"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 655,
+            "text": "DJ店家日结算表查询"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 806,
+            "text": "DP店铺孖单汇总分析"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 804,
+            "text": "DQ大区城市店铺客单量统计"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 701,
+            "text": "DJ店家销售排行榜"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 786,
+            "text": "DP店铺退换货基础统计"
+        }]
+    }, {
+        "parentId": 22,
+        "state": "open",
+        "attributes": {},
+        "id": 23,
+        "text": "系统管理",
+        "icon": "i i-settings",
+        "children": [{
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 44,
+            "text": "JC基础数据字典"
+        }, {
+            "state": "open",
+            "attributes": {
+                "url": "list.html"
+            },
+            "id": 699,
+            "text": "MD门店本地参数"
+        }]
+    }, {
+        "parentId": 1,
+        "state": "open",
+        "id": 23,
+        "text": "框架可用组件",
+        "icon": "i i-layer",
+        "attributes": {
+            "url": "http://172.17.210.82/bootstrap-template/components.html"
+        }
+    }, {
+        "parentId": 1,
+        "state": "open",
+        "id": 23,
+        "text": "框架使用文档",
+        "icon": "i i-book",
+        "attributes": {
+            "url": "http://172.17.210.82/ocp/api/"
+        }
+    }]
+}]

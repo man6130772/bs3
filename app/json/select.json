@@ -1,0 +1,19 @@
+[
+    {
+        "value": "string",    // 必要
+        "text": "string",     // 必要
+        "class": "string",    // 可选
+        "disabled": false,     // 可选
+        "divider": true, // 可选: 是否分割线
+
+        // Data attributes that you would set on the option tag, these will be
+        // set on the newly created options tags and the selectpicker plugin
+        // will process them accordingly.
+        "data": {
+            "divider": true,
+            "subtext": "string",
+            "icon": "class-name", // Icon class name ex: icon-glass
+            "content": "<div class=\"custom-class\">my value label</div>",
+        }
+    }
+]

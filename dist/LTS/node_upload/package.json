@@ -1,0 +1,12 @@
+{
+  "name": "index",
+  "devDependencies": {
+    "formidable": "1.0.17",
+    "mime": ">=1.2.9",
+    "mkdirp": "^0.5.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "optionalDependencies": {}
+}

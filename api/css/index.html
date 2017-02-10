@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>css组件使用 - bootstrap3-1.0.0框架使用文档</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "css\u7ec4\u4ef6\u4f7f\u7528";
+    var mkdocs_page_input_path = "css.md";
+    var mkdocs_page_url = "/css/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> bootstrap3-1.0.0框架使用文档</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">框架结构</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../start/">起步使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">css组件使用</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#icon">icon字体图标使用示例</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#icon_1">icon字体图标使用说明</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#marginpadding">margin和padding样式类使用示例</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#marginpadding_1">margin和padding样式类使用说明</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#wrapper">wrapper填充样式类使用示例</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#wrapper_1">wrapper填充样式类使用说明</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#border">border样式类使用示例</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#border_1">border样式类使用说明</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#text">text样式类使用示例</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#thumb">thumb缩略图样式类使用示例</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#thumb_1">thumb缩略图样式类使用说明</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#no">no开头的相关样式类示例</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_1">框架内其他组件及样式使用参考</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../js/">js组件使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../components/">第三方组件API</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">bootstrap3-1.0.0框架使用文档</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>css组件使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h4 id="icon">icon字体图标使用示例</h4>
+<p>框架默认支持fontawesome, glyphicons, icon三套字体图标集，共有上千种图标。
+查找图标可打开<a href="../../template/icons.html">icon字体图标集</a></p>
+<p>fontawesome图标基础使用示例</p>
+<pre><code>&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<p>fontawesome图标大尺寸使用示例</p>
+<pre><code>&lt;i class=&quot;fa fa-calendar fa-lg&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<p>glyphicon图标使用示例</p>
+<pre><code>&lt;i class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<p>icon图标使用示例</p>
+<pre><code>&lt;i class=&quot;i i-calendar&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<h4 id="icon_1">icon字体图标使用说明</h4>
+<ol>
+<li>fa为必有的样式类名，后面的fa-calendar为具体的图标名称；</li>
+<li>图标尺寸可用的样式类名有fa-lg (增大33%), fa-2x, fa-3x, fa-4x, fa-5x；</li>
+<li>fontawesome图标还支持2个图标组合使用、动画效果等，具体参考 <a href="http://fontawesome.io/examples/">fontawesome图标官方使用示例</a>；</li>
+<li>目前框架里使用的fontawesome图标集为官方的4.6.3版本。</li>
+<li>其他2种图标的使用方法类似，不支持大尺寸或其他效果。</li>
+</ol>
+<h4 id="marginpadding">margin和padding样式类使用示例</h4>
+<p>margin-right示例:</p>
+<pre><code>&lt;div class=&quot;m-r-xxs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-r-xs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-r-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-r&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-r-md&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-r-lg&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>margin示例（四个方向都有边距）:</p>
+<pre><code>&lt;div class=&quot;m-xxs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-xs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-md&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;m-lg&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>padding-right示例:</p>
+<pre><code>&lt;div class=&quot;p-r-xxs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-r-xs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-r-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-r&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-r-md&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-r-lg&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>padding示例（四个方向都有填充）:</p>
+<pre><code>&lt;div class=&quot;p-xxs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-xs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-md&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;p-lg&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>padding水平方向填充示例（左右都有填充）:</p>
+<pre><code>&lt;div class=&quot;padder-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;padder&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;padder-md&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>padding垂直方向填充示例（上下都有填充）:</p>
+<pre><code>&lt;div class=&quot;padder-v-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;padder-v&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;padder-v-md&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<h4 id="marginpadding_1">margin和padding样式类使用说明</h4>
+<ol>
+<li>上边距margin-top、右边距margin-right、下边距margin-bottom、左边距margin-left的样式类名分别是<code>m-t</code>、<code>m-r</code>、<code>m-b</code>、<code>m-l</code>，即首字母简写；</li>
+<li>margin和padding可用的尺寸有xxs(1像素)，xs(5像素)，sm(10像素)，md(20像素)，lg(30像素)，什么都不加的比如<code>m</code>或<code>m-r</code>为15像素；</li>
+<li>padding四个方向的样式名为:<code>p-t</code>，<code>p-r</code>，<code>p-b</code>，<code>p-l</code>，四个方向都需要填充的话使用<code>p</code>+<code>尺寸名</code>（见上面的示例）；</li>
+<li>以上这些样式类可以根据实际需要组合使用；</li>
+</ol>
+<h4 id="wrapper">wrapper填充样式类使用示例</h4>
+<pre><code>&lt;div class=&quot;wrappper-xxs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;wrappper-xs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;wrappper-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;wrappper&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;wrappper-md&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;wrappper-lg&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;wrappper-xl&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<h4 id="wrapper_1">wrapper填充样式类使用说明</h4>
+<ol>
+<li>wrapper样式类主要适合于div容器使用；</li>
+<li>wrapper的尺寸样式类<code>wrapper-xxs</code>、<code>wrapper-xs</code>、<code>wrapper-sm</code>、<code>wrapper</code>、<code>wrapper-md</code>、<code>wrapper-lg</code>、<code>wrapper-xl</code>分别对应的填充尺寸为上下2像素左右6像素、上下4像素左右8像素、上下5像素左右10像素、上下左右均为15像素、上下左右均为20像素、上下左右均为30像素、上下左右均为50像素；</li>
+</ol>
+<h4 id="border">border样式类使用示例</h4>
+<p>border为1像素样式类示例</p>
+<pre><code>&lt;div class=&quot;b-a&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-t&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-r&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-b&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-l&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>border可用的颜色样式类示例</p>
+<pre><code>&lt;div class=&quot;b-light&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-dark&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-primary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-success&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-info&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-warning&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-danger&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b-white&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>border右边框为2像素样式类示例</p>
+<pre><code>&lt;div class=&quot;b-r b-2x&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>border右边框为1像素红色样式类示例</p>
+<pre><code>&lt;div class=&quot;b-r b-danger&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<h4 id="border_1">border样式类使用说明</h4>
+<ol>
+<li>上右下左的简写与上面的margin和padding一样<code>b-t</code>、<code>b-r</code>、<code>b-b</code>、<code>b-l</code>；</li>
+<li>四个边都有边框的样式类为<code>b-a</code>；</li>
+<li>border可用颜色有几个使用了与bootstrap相同的颜色名称，色值也是一样的，此外增加了几个颜色；</li>
+<li>border的尺寸样式类<code>b-2x</code>、<code>b-3x</code>、<code>b-4x</code>、<code>b-5x</code>分别对应的尺寸为2像素、3像素、4像素、5像素；</li>
+</ol>
+<h4 id="text">text样式类使用示例</h4>
+<p>text字体大小样式类示例</p>
+<pre><code>&lt;div class=&quot;text-xs&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-md&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-lg&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>text字体大小样式类说明
+1. text字体大小样式类<code>text-xs</code>、<code>text-sm</code>、<code>text-md</code>、<code>text-lg</code>分别对应的字体大小为11像素、12像素、14像素、16像素；
+2. 需要更大的字号，建议使用h1 ~ h6标签；</p>
+<p>text文字省略号样式类示例</p>
+<pre><code>&lt;div class=&quot;text-ellipsis&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;一段很长很长很长很长的文字一段很长很长很长很长的文字&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>text字母大写样式类示例</p>
+<pre><code>&lt;div class=&quot;text-u-c&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>text文字删除线样式类示例</p>
+<pre><code>&lt;div class=&quot;text-l-t&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>text文字下划线样式类示例</p>
+<pre><code>&lt;div class=&quot;text-u-l&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<h4 id="thumb">thumb缩略图样式类使用示例</h4>
+<pre><code>&lt;div class=&quot;thumb-xs&quot;&gt;&lt;img src=&quot;...&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;thumb-sm&quot;&gt;&lt;img src=&quot;...&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;thumb&quot;&gt;&lt;img src=&quot;...&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;thumb-md&quot;&gt;&lt;img src=&quot;...&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;thumb-lg&quot;&gt;&lt;img src=&quot;...&quot; /&gt;&lt;/div&gt;
+</code></pre>
+
+<h4 id="thumb_1">thumb缩略图样式类使用说明</h4>
+<ol>
+<li>thumb的五个尺寸<code>thumb-xs</code>、<code>thumb-sm</code>、<code>thumb</code>、<code>thumb-md</code>、<code>thumb-lg</code>分别对应的尺寸为24像素、34像素、50像素、64像素、128像素；</li>
+<li>thumb为行内块元素；</li>
+<li>thumb下的图片为宽度占满、宽度自动，垂直居中于thumb内部；</li>
+</ol>
+<h4 id="no">no开头的相关样式类示例</h4>
+<pre><code>&lt;div class=&quot;no-border&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;no-borders&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;no-radius&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;no-padder&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<h3 id="_1">框架内其他组件及样式使用参考</h3>
+<p>使用方式进入下面页面后，右键查看源代码（不是审查元素），拷贝html代码到项目页面即可。
+不需要额外步骤，因为样式在框架的<code>app.css</code>里都有了。</p>
+<ul>
+<li><a href="../../template/buttons.html">button按钮样式</a></li>
+<li><a href="../../template/grid.html">grid网格布局</a></li>
+<li><a href="../../template/components.html">各种bootstrap自带组件样式</a></li>
+<li><a href="../../template/widgets.html">各种挂件样式</a></li>
+<li><a href="../../template/portlet.html">媒体列表样式</a></li>
+<li><a href="../../template/index.html">其他参考</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../js/" class="btn btn-neutral float-right" title="js组件使用">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../start/" class="btn btn-neutral" title="起步使用"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../start/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../js/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

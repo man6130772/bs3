@@ -1,0 +1,9 @@
+<div class="module-footer padder {{#isMargin margin}}m-b{{/isMargin}}">
+{{#if_design_mode}}
+{{#compare startTime "==" endTime}}
+{{else}}
+	开始：{{::defaultValue startTime '-'}}<br/>
+	结束：{{::defaultValue endTime '-'}}
+{{/compare}}
+{{/if_design_mode}}
+</div>

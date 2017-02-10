@@ -1,0 +1,12 @@
+<a 
+{{#if_design_mode}}
+	{{#if imageSrc}} 
+	  class="box" 
+	{{else}}
+	  class="box empty-image" 
+	{{/if}}
+{{::href}} 
+{{else}} 
+	href="{{::callBlockHandle "getLink" this}}" 
+{{/if_design_mode}}
+>{{#if_design_mode}}<img src="{{::getImageSrc imageSrc }}"/>{{else}}<img {{::getSrcAttr}}="{{::getImageSrc imageSrc }}"/>{{/if_design_mode}}</a>

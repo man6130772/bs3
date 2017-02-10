@@ -1,0 +1,22 @@
+{{::initArray this "list" 4}}
+{{#if_design_mode}}
+<div class="module-box column-count-4 column-gap-xs {{layout}}" style="{{::getHeight height}}">
+	{{#eachArray list this 4}}
+		<div class="item">
+		{{::callBlockHandle "image" value}}
+		</div>
+	{{/eachArray}}
+</div>
+{{else}}
+<div class="module-box {{layout}} swiper-container list" style="{{::getHeight height}}">
+	<div class="swiper-wrapper"  style="{{::getHeight height}}">
+	{{#eachArray list this}}
+		<div class="swiper-slide">
+		{{::callBlockHandle "image" value}}
+		</div>
+	{{/eachArray}}
+	</div>
+  <div class="swiper-scrollbar"></div>
+</div>
+{{/if_design_mode}}
+{{::callBlockHandle "footer" this}}

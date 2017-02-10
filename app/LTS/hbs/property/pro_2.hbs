@@ -1,0 +1,9 @@
+{{#params-expression "isDaterange=true" "heightLable=图片"}}
+  {{::callBlockHandle "header" this}}
+{{/params-expression}}
+{{::initArray this "list" 2}}
+{{#eachArray list this}}
+    {{#params-expression "this=@value" "i=@i" "index=@index" "isGroup=true" "isNoImage=true" "itemTitle=商品" "parent=@parent"}}
+      {{::callBlockHandle "image-link" this}}
+    {{/params-expression}}
+{{/eachArray}}

@@ -1,0 +1,15 @@
+<section class="panel panel-default pos-rlt clearfix" data-role="panel" id="{{id}}">
+<header class="panel-heading">
+    <ul class="nav nav-pills pull-right">
+        <li>
+            <a  {{::href}} class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+        </li>
+        <li>
+            <a  {{::href}} class="text-muted"  data-role="remove"><i class="fa fa-times"></i></a>
+        </li>
+    </ul><span data-role="title">{{title}}</span>
+</header>
+<div class="panel-body clearfix" data-role="body">
+    {{{html}}}
+</div>
+</section>

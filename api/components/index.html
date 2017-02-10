@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>第三方组件API - bootstrap3-1.0.0框架使用文档</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u7b2c\u4e09\u65b9\u7ec4\u4ef6API";
+    var mkdocs_page_input_path = "components.md";
+    var mkdocs_page_url = "/components/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> bootstrap3-1.0.0框架使用文档</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">框架结构</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../start/">起步使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../css/">css组件使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../js/">js组件使用</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">第三方组件API</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#bootstrap-v3-bootstrap-v3">bootstrap-v3: bootstrap v3官方组件</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bootstrap-datetimepicker">bootstrap-datetimepicker: 日期选择</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bootstrap-table">bootstrap-table: 表格</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bootstrap-treeview">bootstrap-treeview: 树形结构</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bootstrap-bootbox">bootstrap-bootbox: 弹出确认警告框</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bootstrap-notify">bootstrap-notify: 弹出消息提示</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bootstrap-select">bootstrap-select: 下拉选择</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ajax-bootstrap-select-ajaxbootstrap-select">ajax-bootstrap-select: ajax下拉选择(基于bootstrap-select)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#jquery-slimscroll">jQuery-slimScroll: 滚动条</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#html5-sortable">html5-sortable: 拖拽排序</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#chosen">chosen: 下拉多选提示，选中的标签展示，标签可删除</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#api">组件API说明</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">bootstrap3-1.0.0框架使用文档</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>第三方组件API</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h4 id="bootstrap-v3-bootstrap-v3">bootstrap-v3: bootstrap v3官方组件</h4>
+<p><a href="http://v3.bootcss.com/components">http://v3.bootcss.com/components</a></p>
+<h4 id="bootstrap-datetimepicker">bootstrap-datetimepicker: 日期选择</h4>
+<p><a href="http://eonasdan.github.io/bootstrap-datetimepicker/Options">http://eonasdan.github.io/bootstrap-datetimepicker/Options</a></p>
+<h4 id="bootstrap-table">bootstrap-table: 表格</h4>
+<p><a href="http://bootstrap-table.wenzhixin.net.cn/documentation">http://bootstrap-table.wenzhixin.net.cn/documentation</a></p>
+<h4 id="bootstrap-treeview">bootstrap-treeview: 树形结构</h4>
+<p><a href="http://jonmiles.github.io/bootstrap-treeview">http://jonmiles.github.io/bootstrap-treeview</a></p>
+<h4 id="bootstrap-bootbox">bootstrap-bootbox: 弹出确认警告框</h4>
+<p><a href="http://bootboxjs.com/#getting-started">http://bootboxjs.com/#getting-started</a></p>
+<h4 id="bootstrap-notify">bootstrap-notify: 弹出消息提示</h4>
+<p><a href="http://bootstrap-notify.remabledesigns.com">http://bootstrap-notify.remabledesigns.com</a></p>
+<h4 id="bootstrap-select">bootstrap-select: 下拉选择</h4>
+<p><a href="http://silviomoreto.github.io/bootstrap-select/methods">http://silviomoreto.github.io/bootstrap-select/methods</a></p>
+<h4 id="ajax-bootstrap-select-ajaxbootstrap-select">ajax-bootstrap-select: ajax下拉选择(基于bootstrap-select)</h4>
+<p><a href="https://github.com/truckingsim/Ajax-Bootstrap-Select#options">https://github.com/truckingsim/Ajax-Bootstrap-Select#options</a></p>
+<h4 id="jquery-slimscroll">jQuery-slimScroll: 滚动条</h4>
+<p><a href="https://github.com/rochal/jQuery-slimScroll">https://github.com/rochal/jQuery-slimScroll</a></p>
+<h4 id="html5-sortable">html5-sortable: 拖拽排序</h4>
+<p><a href="http://farhadi.ir/projects/html5sortable">http://farhadi.ir/projects/html5sortable</a></p>
+<h4 id="chosen">chosen: 下拉多选提示，选中的标签展示，标签可删除</h4>
+<p><a href="https://harvesthq.github.io/chosen">https://harvesthq.github.io/chosen</a></p>
+<h4 id="api">组件API说明</h4>
+<ol>
+<li>因为是第三方组件，api文档属性会经常更新，维护到本地工作量很大，所以参考官方文档即可；</li>
+<li>常用的组件默认属性等，除了看官方文档，更加建议在<code>components.js</code>或单独引用的组件js文件里查找，这样可以更加熟悉组件；</li>
+<li>如果有不明白的或需要在框架里扩展的，可以随时联系web前端组（吴晗）</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../js/" class="btn btn-neutral" title="js组件使用"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../js/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>bs3-1.0.0框架使用文档</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/avenir-white.css" />
+</head>
+
+<body>
+    <xmp theme="united" style="display:none;">
+
+# bs3-1.0.0框架使用文档：
+
+## 1. 框架结构：
+
+### 1.1 css目录：
+* app.css : bootstrap框架及字体及动画样式
+* base.css : 公共全局样式及第三方组件样式
+* login.css : 登录页样式
+
+### 1.2 fonts目录：
+* opensans目录 : opensans字体
+* fontawesome* : fontawesome字体图标
+* glyphicons* : bootstrap自带的glyphicons字体图标
+* icon* : icon字体图标
+
+### 1.3 js目录：
+* boot.js : 框架初始化js文件
+* base.js : 左侧菜单组件及全局事件
+* components.js : 常用第三方组件（树形treeview及扩展、警告框bootbox、消息通知notify、下拉选择列表select、滚动条slimscroll、加载中waitingfor）
+
+### 1.4 html页面：
+* [blank.html](http://172.17.210.82/ocp/blank.html) : 空白页（可作为基础开发页面）
+* [category.html](http://172.17.210.82/ocp/category.html) : 分类列表页（左侧树状，右边可拖拽的列表）
+* [column-form.html](http://172.17.210.82/ocp/column-form.html) : 多列表单页（一行显示多个表单项，可用于弹出框的表单或内容较多的表单）
+* [detail.html](http://172.17.210.82/ocp/detail.html) : 详细页（数据项的显示及编辑页面）
+* [gallery.html](http://172.17.210.82/ocp/gallery.html) : 相册页（多图列表的展示页面）
+* [index.html](http://172.17.210.82/ocp/index.html) : 首页 （模板项目的首页）
+* [list-simple.html](http://172.17.210.82/ocp/list-simple.html) : 简单列表页（用于日常开发的搜索及数据表格展示页）
+* [list.html](http://172.17.210.82/ocp/list.html) : 复杂列表页（复杂数据表格的展示页）
+* [login.html](http://172.17.210.82/ocp/login.html) : 登录页（模板登录页）
+* [modules.html](http://172.17.210.82/ocp/modules.html) : 模块管理页（复杂布局及标签页及各种弹出选择的页）
+* [scroll-form.html](http://172.17.210.82/ocp/scroll-form.html) : 滚动表单页（一行一个表单项的长表单页，顶部可自动高亮显示当前表单的定位）
+* [table-edit.html](http://172.17.210.82/ocp/table-edit.html) : 表格编辑状态页（数据表格编辑的formatter演示）
+* [validator.html](http://172.17.210.82/ocp/validator.html) : 表单验证页（表单校验插件的演示页）
+
+
+
+## 2. 框架使用：
+
+### 2.1 html头部及css引用：
+
+##### 页面头部代码
+```
+<!DOCTYPE html>
+<html lang="en" class="app no-touch">
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
+</head>
+```
+##### 说明：
+1. 头部head区域代码使用以上就可以，可以根据项目需要再加额外的代码进去；
+2. 文档声明统一使用`<!DOCTYPE html>`；
+3. 上面的html标签必须加`class="app no-touch"`；
+4. 上面的两个css文件引用，必须是`app.css`在上面，`base.css`在下面，额外的css文件放在`base.css`下面；
+
+
+
+### 2.2 js引用：
+* 所有的js代码引用统一放到页面底部
+* js代码独立成文件，html标签和页面上不要有js代码片段（模板页面底部的js代码片段是方便演示和拷贝）
+
+##### 每个页面底部必须的js引用和代码片段：
+```
+    <script>
+        // 配置信息一定要放在boot.js上面，
+        // 所有js引用和代码放在页面底部
+        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var BasePath = './';
+    </script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+    <script>
+    $(function(){
+        /**
+         * init sideNav
+         * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
+         */
+        $('#sideNav').sideNav({
+            url: BasePath+'json/left_tree.json'
+        });
+    });
+    </script>
+```
+##### 说明：
+1. `staticurl`根据项目需要配置，项目除了公共的这个`staticurl`，应该还有自己静态资源的url，
+如`staticurl`所示，版本号也要放在`staticurl`里面作为项目的配置属性，以后框架升级，需要修改这个1.0.0版本号；
+2. `BasePath`也是根据项目路径去设置，设置为相对路径就可以；
+3. `staticurl`和`BasePath`的配置，要放在`boot.js`引用的上面；
+4. `boot.js`引用是放在所有js文件引用最上面的，因为`boot.js`里面加载了jquery及bootstrap等框架文件和第三方组件；
+5. `sideNav`为左侧菜单的插件，该插件由我们自己开发并放在了`base.js`里，
+项目使用时可以下载上面的json模板数据到本地(该文件做了精简)，参考json数据去自己开发左侧数据接口。
+
+
+### 2.3 其他组件及样式使用参考：
+
+使用方式：进入下面页面后，右键查看源代码（不是审查元素），拷贝html代码到项目页面即可。
+不需要额外步骤，因为样式在框架的`app.css`里都有了。
+
+* [icon字体图标集](http://172.17.210.82/bootstrap-template/icons.html)
+* [button按钮样式](http://172.17.210.82/bootstrap-template/buttons.html)
+* [grid网格布局](http://172.17.210.82/bootstrap-template/icons.html)
+* [各种bootstrap自带组件样式](http://172.17.210.82/bootstrap-template/components.html)
+* [各种挂件样式](http://172.17.210.82/bootstrap-template/widgets.html)
+* [媒体列表样式](http://172.17.210.82/bootstrap-template/portlet.html)
+* [其他参考](http://172.17.210.82/bootstrap-template/index.html)
+
+
+
+## 3. 框架说明：
+1. 目前模板页面每个页面都是独立的，需要刷新整个页面的，这样是为了性能考虑，
+以前包括easyui那种页面里tab标签形式，实际是开了很多个iframe，开几个页面之后，cpu就会占用很高，
+因此这种方式早就开始被淘汰了，各大网站后台包括淘宝等都没有采用的，浏览器自带了标签页也会对资源进行缓存；
+2. 项目里需要根据空白页`blank.html`分离出头部、左部、底部为共通的文件，模板文件都是静态页面，没有做分离处理；
+3. 基础页面也可以以空白页`blank.html`为基础进行开发;
+4. 模板页面里使用的css、js、fonts已经放到了开发环境和生产环境，可按上面的使用方法去引用，在项目里配置好该框架的资源路径；
+
+
+
+## 4. 组件API：
+
+框架里用到的组件的api文档地址：
+
+##### bootstrap-v3: bootstrap v3官方组件：
+[http://v3.bootcss.com/components](http://v3.bootcss.com/components)
+
+##### bootstrap-datetimepicker: 日期选择
+[http://eonasdan.github.io/bootstrap-datetimepicker/Options](http://eonasdan.github.io/bootstrap-datetimepicker/Options)
+
+##### bootstrap-table: 表格
+[http://bootstrap-table.wenzhixin.net.cn/documentation](http://bootstrap-table.wenzhixin.net.cn/documentation)
+
+##### bootstrap-treeview: 树形结构
+[http://jonmiles.github.io/bootstrap-treeview](http://jonmiles.github.io/bootstrap-treeview)
+
+##### bootstrap-bootbox: 弹出确认警告框
+[http://bootboxjs.com/#getting-started](http://bootboxjs.com/#getting-started)
+
+##### bootstrap-notify: 弹出消息提示
+[http://bootstrap-notify.remabledesigns.com](http://bootstrap-notify.remabledesigns.com)
+
+##### bootstrap-select: 下拉选择
+[http://silviomoreto.github.io/bootstrap-select/methods](http://silviomoreto.github.io/bootstrap-select/methods)
+
+##### ajax-bootstrap-select: ajax下拉选择(基于bootstrap-select)
+[https://github.com/truckingsim/Ajax-Bootstrap-Select#options](https://github.com/truckingsim/Ajax-Bootstrap-Select#options)
+
+##### jQuery-slimScroll: 滚动条
+[https://github.com/rochal/jQuery-slimScroll](https://github.com/rochal/jQuery-slimScroll)
+
+##### html5-sortable: 拖拽排序
+[http://farhadi.ir/projects/html5sortable](http://farhadi.ir/projects/html5sortable)
+
+##### chosen: 下拉多选提示，选中的标签展示，标签可删除
+[https://harvesthq.github.io/chosen](https://harvesthq.github.io/chosen)
+
+##### 说明：
+1. 因为是第三方组件，api文档属性会经常更新，维护到本地工作量很大，所以参考官方文档即可；
+2. 常用的组件默认属性等，除了看官方文档，更加建议在`components.js`或单独引用的组件js文件里查找，这样可以更加熟悉组件；
+3. 如果有不明白的或需要在框架里扩展的，可以随时联系web前端组（吴晗）
+
+
+    </xmp>
+
+    <script src="js/strapdown.js"></script>
+</body>
+</html>

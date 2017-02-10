@@ -1,0 +1,66 @@
+.module-box .flex-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+} 
+ 
+ .panel-body {
+     max-width: 450px;
+     margin: 0 auto;
+ }
+ 
+ .edit-mask {
+     display: none;
+     background: rgba(55, 55, 55, 0.5);
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 300px;
+     z-index: 1039;
+ }
+ 
+ .drag-helper {
+     padding: 50px;
+     width: 100px;
+     height: 100px;
+     opacity: 0.7;
+     background-color: #9CCEE4;
+ }
+ /*ui-sortable-placeholder panel*/
+ 
+ .tab-pane .ui-sortable-placeholder.panel {
+     outline: 2px dashed #FF9800;
+     height: 41px;
+     outline-offset: -2px;
+ }
+ /*
+    .tab-pane.sortable .ui-sortable-helper.panel {
+        height: 41px !important;
+        overflow: hidden;
+    }
+    .tab-pane.sortable .ui-sortable-placeholder{
+        height: 41px !important;
+        overflow: hidden;
+    }
+*/
+ 
+ .tab-pane.sortable .panel-body {
+     display: none;
+ }
+ 
+ .tab-pane .panel.active {
+     outline: 2px solid #03A9F4;
+ }
+.b-l .form-horizontal .image-size{
+    color: #BBB;
+}

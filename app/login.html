@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="app">
+
+<head>
+    <meta charset="utf-8" />
+    <title>OCP微商城管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/login.css" type="text/css" />
+</head>
+
+<body class="login">
+    
+    <section id="content" class="content wrapper-md animated fadeInUp">
+        <div class="container">
+            <div class="col-sm-6 hidden-xs">
+                <img src="http://172.17.210.82/ocp/images/login/pic_01.png" alt="">
+            </div>
+            <div class="col-sm-6">
+                <div class="bg-dask-float">
+                    <div class="aside-xl login-form">
+                        <a href="#"><img class="img-full" src="http://172.17.210.82/ocp/images/login/icon_logo.png" alt=""></a>
+                        <section class="m-t-lg m-b-lg">
+                            <form action="index.html" id="loginForm" data-parsley-validate>
+                                <div class="list-group no-radius m-b-lg">
+                                    <div class="list-group-item m-b-md icon-user">
+                                        <input type="text" required class="form-control no-border" placeholder="用户" data-parsley-error-message="请输入用户名..." />
+                                    </div>
+                                    <div class="list-group-item icon-key">
+                                        <input type="password" required class="form-control no-border" placeholder="密码" data-parsley-error-message="请输入密码..."/>
+                                    </div>
+                                    <a class="pull-right" href="#"><small>忘记密码?</small></a>
+                                    <div class="list-group-item m-t-50">
+                                        <input type="password" required class="form-control no-border" placeholder="验证码" data-parsley-error-message="请输入验证码..." />
+                                        <a href="javascript:;"><img id="validcode" class="validcode" src="http://172.17.210.182:3090/webapps/vcode.png?w=100&h=56" /></a>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">登录</button>
+                            </form>
+                        </section>
+                    </div>
+                    <img class="bg-dask-float-tree" src="http://172.17.210.82/ocp/images/login/bg_dask_float_tree.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-top"></div>
+    <div class="bg-bottom"><span class="copyright">COPYRIGHT © 2015-2016 百丽集团信息中心</span></div>
+    
+
+    <script>
+        // 配置信息一定要放在boot.js上面，
+        // 所有js引用和代码放在页面底部
+        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var BasePath = './';
+    </script>
+
+    <!-- // <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script> -->
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/libs/jquery.min.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/validator/parsley.config.js"></script>
+    <script src="http://s.belle.net.cn/bs3/1.0.1/js/validator/parsley.js"></script>
+
+    <script>
+        $("#validcode").on('click.valid', function (e) {
+            var codeImg = "http://172.17.210.182:3090/webapps/vcode.png?w=100&h=56&r="
+            codeImg += Math.ceil(Math.random()*10000000000);
+            $(this).attr("src", codeImg);
+        });
+    </script>
+</body>
+
+</html>
