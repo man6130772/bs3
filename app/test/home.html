@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html class="app no-touch">
+
 <head>
     <meta charset="utf-8" />
     <title>OCP微商城管理系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <!-- <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" /> -->
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.min.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="../css/app.css" type="text/css" /> -->
+    <link rel="stylesheet" href="../css/app.css" type="text/css" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../js/datetimepicker/datetimepicker.min.css" type="text/css" />
 </head>
 
 <body class="">
@@ -15,7 +16,7 @@
         <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
             <div class="navbar-header aside-md dk">
                 <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
-                <a href="index.html" class="navbar-brand"> <img src="http://172.17.210.82/ocp/images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
+                <a href="index.html" class="navbar-brand"> <img src="../images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
                 <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user"> <i class="fa fa-cog"></i> </a>
             </div>
             <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
@@ -25,7 +26,7 @@
                         <section class="panel bg-white">
                             <div class="panel-heading b-light bg-light"> <strong>你有<span class="count">2</span> 个新通知</strong> </div>
                             <div class="list-group list-group-alt">
-                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="../images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
                                 <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0版本发布<br> <small class="text-muted">1小时前</small> </span> </a>
                             </div>
                             <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </div>
@@ -33,7 +34,7 @@
                     </section>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="../images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
                     <ul class="dropdown-menu animated fadeInRight">
                         <li> <span class="arrow top"></span> <a href="#">系统设置</a> </li>
                         <li> <a href="#">资料修改</a> </li>
@@ -59,15 +60,15 @@
                                     <div class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             <span class="thumb avatar pull-left m-r">
-                                                <img src="http://172.17.210.82/ocp/images/avatar/a0.png" class="dker" alt="..."> 
+                                                <img src="../images/avatar/a0.png" class="dker" alt="..."> 
                                                 <i class="on md b-black"></i>
                                             </span>
                                             <span class="hidden-nav-xs clear">
                                                 <span class="block m-t-xs">
                                                     <strong class="font-bold text-lt">维森莫</strong>
                                                     <b class="caret"></b>
-                                                </span> 
-                                                <span class="text-muted text-xs block">超级管理员</span>
+                                                </span>
+                                            <span class="text-muted text-xs block">超级管理员</span>
                                             </span>
                                         </a>
                                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -81,9 +82,11 @@
                                             <li> <a href="login.html" data-toggle="ajaxModal">退出</a> </li>
                                         </ul>
                                     </div>
-                                </div><!-- user -->
+                                </div>
+                                <!-- user -->
                                 <nav id="sideNav" class="nav-primary hidden-xs">
-                                </nav><!-- nav -->
+                                </nav>
+                                <!-- nav -->
                             </div>
                         </section>
                         <footer class="footer hidden-xs no-padder text-center-nav-xs">
@@ -106,91 +109,91 @@
                                             <div class="row text-center">
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/slider.png" />
+                                                        <img src="../images/layout/slider.png" />
                                                         <h5>轮播图</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/recommend.png" />
+                                                        <img src="../images/layout/recommend.png" />
                                                         <h5>功能推荐</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_l_1_1.png" />
+                                                        <img src="../images/layout/module_l_1_1.png" />
                                                         <h5>模块链接1-1</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_l_1_2.png" />
+                                                        <img src="../images/layout/module_l_1_2.png" />
                                                         <h5>模块链接1-2</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_l_1_3.png" />
+                                                        <img src="../images/layout/module_l_1_3.png" />
                                                         <h5>模块链接1-3</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_l1.png" />
+                                                        <img src="../images/layout/module_l1.png" />
                                                         <h5>模块链接1</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_l2.png" />
+                                                        <img src="../images/layout/module_l2.png" />
                                                         <h5>模块链接2</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_l3.png" />
+                                                        <img src="../images/layout/module_l3.png" />
                                                         <h5>模块链接3</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_2_1.png" />
+                                                        <img src="../images/layout/module_2_1.png" />
                                                         <h5>模块链接2-1</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_1_2.png" />
+                                                        <img src="../images/layout/module_1_2.png" />
                                                         <h5>模块链接1-2上下</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/module_n.png" />
+                                                        <img src="../images/layout/module_n.png" />
                                                         <h5>模块链接N个横铺</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/notice.png" />
+                                                        <img src="../images/layout/notice.png" />
                                                         <h5>快报</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/pro_n.png" />
+                                                        <img src="../images/layout/pro_n.png" />
                                                         <h5>商品列表N个横铺</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/pro_3.png" />
+                                                        <img src="../images/layout/pro_3.png" />
                                                         <h5>商品列表3个横铺</h5>
                                                     </a>
                                                 </div>
                                                 <div class="col-xs-6">
                                                     <a class="padder-v block" href="javascript:void(0);">
-                                                        <img src="http://172.17.210.82/ocp/images/layout/pro_2.png" />
+                                                        <img src="../images/layout/pro_2.png" />
                                                         <h5>商品列表2个横铺</h5>
                                                     </a>
                                                 </div>
@@ -220,263 +223,296 @@
                                                 <div class="tab-content">
                                                     <div class="tab-pane fade active in" id="moduleEdit">
 
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合1列1图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box column-count-1">
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                    </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合1列1图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box column-count-1">
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
                                                                 </div>
-                                                            </section>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
 
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合2列2图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box column-count-2 column-gap-xs">
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合2列2图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box column-count-2 column-gap-xs">
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
                                                                 </div>
-                                                            </section>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
 
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合3列3图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box column-count-3 column-gap-xs">
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合3列3图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box column-count-3 column-gap-xs">
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
                                                                 </div>
-                                                            </section>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
 
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合4列4图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box column-count-4 column-gap-xs">
-                                                                        <div class="item"><a class="box no-count" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合4列4图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box column-count-4 column-gap-xs">
+                                                                    <div class="item">
+                                                                        <a class="box no-count" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
                                                                 </div>
-                                                            </section>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
 
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合2列4图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box column-count-2 column-gap-xs">
-                                                                        <div class="item m-b-xs"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box no-count" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item m-b-xs"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
-                                                                        <div class="item"><a class="box" href="#"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a></div>
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合2列4图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box column-count-2 column-gap-xs">
+                                                                    <div class="item m-b-xs">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                    <div class="item">
+                                                                        <a class="box no-count" href="#"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                    <div class="item m-b-xs">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <a class="box" href="#"><img src="../images/common/p0.jpg" /></a>
                                                                     </div>
                                                                 </div>
-                                                            </section>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
 
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合上1下2图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box table-box">
-                                                                        <div class="box-cell">
-                                                                            <div class="cell-h-50 p-b-xs" href="#">
-                                                                                <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合上1下2图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box table-box">
+                                                                    <div class="box-cell">
+                                                                        <div class="cell-h-50 p-b-xs" href="#">
+                                                                            <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                        </div>
+                                                                        <div class="table-box">
+                                                                            <div class="box-cell cell-h-50 cell-w-50 p-r-xs" href="#">
+                                                                                <a class="box"><img src="../images/common/p0.jpg" /></a>
                                                                             </div>
+                                                                            <div class="box-cell cell-h-50 cell-w-50" href="#">
+                                                                                <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
+
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合左1右2图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box table-box">
+                                                                    <div class="box-cell p-r-xs">
+                                                                        <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                    <div class="box-cell">
+                                                                        <div class="item cell-h-30 p-b-xs" href="#">
+                                                                            <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                        </div>
+                                                                        <div class="item cell-h-70" href="#">
+                                                                            <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
+
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合左2右1图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box table-box">
+                                                                    <div class="box-cell p-r-xs">
+                                                                        <div class="item cell-h-50 p-b-xs" href="#">
+                                                                            <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                        </div>
+                                                                        <div class="item cell-h-50" href="#">
+                                                                            <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box-cell">
+                                                                        <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
+
+                                                        <section class="panel panel-default pos-rlt clearfix">
+                                                            <header class="panel-heading">
+                                                                <ul class="nav nav-pills pull-right">
+                                                                    <li>
+                                                                        <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
+                                                                    </li>
+                                                                </ul> 组合左1右3图
+                                                            </header>
+                                                            <div class="panel-body clearfix">
+                                                                <div class="module-box table-box">
+                                                                    <div class="box-cell cell-w-50 p-r-xs">
+                                                                        <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                    </div>
+                                                                    <div class="box-cell cell-w-50">
+                                                                        <div class="item cell-h-50 p-b-xs" href="#">
+                                                                            <a class="box"><img src="../images/common/p0.jpg" /></a>
+                                                                        </div>
+                                                                        <div class="item cell-h-50" href="#">
                                                                             <div class="table-box">
-                                                                                <div class="box-cell cell-h-50 cell-w-50 p-r-xs" href="#">
-                                                                                    <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
+                                                                                <div class="box-cell p-r-xs">
+                                                                                    <a class="box"><img src="../images/common/p0.jpg" /></a>
                                                                                 </div>
-                                                                                <div class="box-cell cell-h-50 cell-w-50" href="#">
-                                                                                    <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
-                                                                    </div>
-                                                                </div>
-                                                            </section>
-
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合左1右2图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box table-box">
-                                                                        <div class="box-cell p-r-xs">
-                                                                            <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                        </div>
-                                                                        <div class="box-cell">
-                                                                            <div class="item cell-h-30 p-b-xs" href="#">
-                                                                                <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                            </div>
-                                                                            <div class="item cell-h-70" href="#">
-                                                                                <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
-                                                                    </div>
-                                                                </div>
-                                                            </section>
-
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合左2右1图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box table-box">
-                                                                        <div class="box-cell p-r-xs">
-                                                                            <div class="item cell-h-50 p-b-xs" href="#">
-                                                                                <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                            </div>
-                                                                            <div class="item cell-h-50" href="#">
-                                                                                <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="box-cell">
-                                                                            <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
-                                                                    </div>
-                                                                </div>
-                                                            </section>
-
-                                                            <section class="panel panel-default pos-rlt clearfix">
-                                                                <header class="panel-heading">
-                                                                    <ul class="nav nav-pills pull-right">
-                                                                        <li>
-                                                                            <a href="#" class="text-muted"><i class="fa fa-times"></i></a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a>
-                                                                        </li>
-                                                                    </ul> 组合左1右3图
-                                                                </header>
-                                                                <div class="panel-body clearfix">
-                                                                    <div class="module-box table-box">
-                                                                        <div class="box-cell cell-w-50 p-r-xs">
-                                                                            <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                        </div>
-                                                                        <div class="box-cell cell-w-50">
-                                                                            <div class="item cell-h-50 p-b-xs" href="#">
-                                                                                <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                            </div>
-                                                                            <div class="item cell-h-50" href="#">
-                                                                                <div class="table-box">
-                                                                                    <div class="box-cell p-r-xs">
-                                                                                        <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                                    </div>
-                                                                                    <div class="box-cell">
-                                                                                        <a class="box"><img src="http://172.17.210.82/ocp/images/common/p0.jpg" /></a>
-                                                                                    </div>
+                                                                                <div class="box-cell">
+                                                                                    <a class="box"><img src="../images/common/p0.jpg" /></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="module-footer padder">
-                                                                        2016-06-20 10:00:00 至 2016-07-20 10:00:00
-                                                                    </div>
                                                                 </div>
-                                                            </section>
+                                                                <div class="module-footer padder">
+                                                                    2016-06-20 10:00:00 至 2016-07-20 10:00:00
+                                                                </div>
+                                                            </div>
+                                                        </section>
 
                                                     </div>
                                                     <div class="tab-pane fade in" id="modulesPreview">
                                                         preview
                                                     </div>
 
-                                                </div><!-- tab content -->
-                                            </div><!-- panel body -->
-                                        </section><!-- scrollable -->
-                                    </section><!-- vbox -->
-                                </section><!-- center -->
+                                                </div>
+                                                <!-- tab content -->
+                                            </div>
+                                            <!-- panel body -->
+                                        </section>
+                                        <!-- scrollable -->
+                                    </section>
+                                    <!-- vbox -->
+                                </section>
+                                <!-- center -->
                                 <aside class="bg-light aside-xl dk b-l">
                                     <section class="vbox bg-light lt">
                                         <header class="header text-right clearfix b-b">
@@ -546,9 +582,9 @@
                                                     <div class="col-sm-7">
                                                         <div class="img-full pos-rlt">
                                                             <!-- <a class="img-mask" href="#"><i class="fa fa-times fa-3x"></i></a> -->
-                                                            <img src="http://172.17.210.82/ocp/images/photo/p1.jpg" />
+                                                            <img src="../images/photo/p1.jpg" />
                                                         </div>
-                                                            <input type="file" class="filestyle" id="filestyle-0" data-icon="false" data-classbutton="btn btn-default" data-classinput="form-control inline v-middle input-s" style="position: fixed; left: -500px;">
+                                                        <input type="file" class="filestyle" id="filestyle-0" data-icon="false" data-classbutton="btn btn-default" data-classinput="form-control inline v-middle input-s" style="position: fixed; left: -500px;">
                                                         <div class="btn-group btn-group-justified">
                                                             <label for="filestyle-0" class="btn btn-sm btn-default"><i class="fa fa-cloud-upload text"></i> <span>上传图片</span></label>
                                                             <label class="btn btn-sm btn-default"><i class="fa fa-search text"></i> 选择图片</label>
@@ -569,13 +605,27 @@
                                                                 <span class="dropdown-label" data-placeholder="Please select">商品详情页</span> <span class="caret"></span>
                                                             </button>
                                                             <ul class="dropdown-menu dropdown-select">
-                                                                <li class="active"><a href="#"><input type="checkbox" name="d-s-c-1">商品列表页</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-2">品牌页面</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-3">商品详情页</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-4">商品分类页面</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-5">搜索关键字</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-5">页面列表</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-5">无跳转</a></li>
+                                                                <li class="active">
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-1">商品列表页</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-2">品牌页面</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-3">商品详情页</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-4">商品分类页面</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-5">搜索关键字</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-5">页面列表</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-5">无跳转</a>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -620,9 +670,9 @@
                                                     <div class="col-sm-7">
                                                         <div class="img-full pos-rlt">
                                                             <!-- <a class="img-mask" href="#"><i class="fa fa-times fa-3x"></i></a> -->
-                                                            <img src="http://172.17.210.82/ocp/images/photo/p1.jpg" />
+                                                            <img src="../images/photo/p1.jpg" />
                                                         </div>
-                                                            <input type="file" class="filestyle" id="filestyle-1" data-icon="false" data-classbutton="btn btn-default" data-classinput="form-control inline v-middle input-s" style="position: fixed; left: -500px;">
+                                                        <input type="file" class="filestyle" id="filestyle-1" data-icon="false" data-classbutton="btn btn-default" data-classinput="form-control inline v-middle input-s" style="position: fixed; left: -500px;">
                                                         <div class="btn-group btn-group-justified">
                                                             <label for="filestyle-1" class="btn btn-sm btn-default"><i class="fa fa-cloud-upload text"></i> <span>上传图片</span></label>
                                                             <label class="btn btn-sm btn-default"><i class="fa fa-search text"></i> 选择图片</label>
@@ -637,13 +687,27 @@
                                                                 <span class="dropdown-label" data-placeholder="Please select">搜索关键字</span> <span class="caret"></span>
                                                             </button>
                                                             <ul class="dropdown-menu dropdown-select">
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-1">商品列表页</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-2">品牌页面</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-3">商品详情页</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-4">商品分类页面</a></li>
-                                                                <li class="active"><a href="#"><input type="checkbox" name="d-s-c-5">搜索关键字</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-5">页面列表</a></li>
-                                                                <li><a href="#"><input type="checkbox" name="d-s-c-5">无跳转</a></li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-1">商品列表页</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-2">品牌页面</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-3">商品详情页</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-4">商品分类页面</a>
+                                                                </li>
+                                                                <li class="active">
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-5">搜索关键字</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-5">页面列表</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"><input type="checkbox" name="d-s-c-5">无跳转</a>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -675,12 +739,14 @@
                                             </div>
                                         </section>
                                     </section>
-                                </aside><!-- aside -->
+                                </aside>
+                                <!-- aside -->
                             </section>
                         </section>
                     </section>
                     <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
-                </section><!-- content -->
+                </section>
+                <!-- content -->
             </section>
         </section>
     </section>
@@ -716,14 +782,18 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- modal body -->
+                </div>
+                <!-- modal body -->
                 <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary">确定</button>
                 </div>modal footer -->
-            </div><!-- modal content -->
-        </div><!-- modal dialog -->
-    </div><!-- page modal -->
+            </div>
+            <!-- modal content -->
+        </div>
+        <!-- modal dialog -->
+    </div>
+    <!-- page modal -->
 
     <!-- product modal -->
     <div id="productModal" class="modal fade">
@@ -738,53 +808,54 @@
                         <div class="row">
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p1.jpg" />
+                                    <img src="../images/photo/p1.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p2.jpg" />
+                                    <img src="../images/photo/p2.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p3.jpg" />
+                                    <img src="../images/photo/p3.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p4.jpg" />
+                                    <img src="../images/photo/p4.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p5.jpg" />
+                                    <img src="../images/photo/p5.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p6.jpg" />
+                                    <img src="../images/photo/p6.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p7.jpg" />
+                                    <img src="../images/photo/p7.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="thumbnail text-center">
-                                    <img src="http://172.17.210.82/ocp/images/photo/p8.jpg" />
+                                    <img src="../images/photo/p8.jpg" />
                                     <div class="caption">商品名称</div>
                                 </a>
                             </div>
-                        </div><!-- row -->
+                        </div>
+                        <!-- row -->
                         <div class="text-center">
                             <ul class="pagination pagination-sm m-t-xs m-b-xs">
                                 <li class="disabled"><span aria-hidden="true"><i class="fa fa-chevron-left"></i></span></li>
@@ -796,85 +867,92 @@
                                 <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
                             </ul>
                         </div>
-                    </div><!-- container -->
-                </div><!-- modal body -->
+                    </div>
+                    <!-- container -->
+                </div>
+                <!-- modal body -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary">确定</button>
-                </div><!-- modal footer -->
-            </div><!-- modal content -->
-        </div><!-- modal dialog -->
-    </div><!-- product modal -->
+                </div>
+                <!-- modal footer -->
+            </div>
+            <!-- modal content -->
+        </div>
+        <!-- modal dialog -->
+    </div>
+    <!-- product modal -->
 
 
     <script>
         // 配置信息一定要放在boot.js上面，
         // 所有js引用和代码放在页面底部
-        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var staticurl = '..';
         var BasePath = './';
     </script>
     <!-- Boot -->
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+    <script src="../js/boot.js"></script>
 
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/moment.min.js"></script>
-    <!-- <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/moment-timezone.js"></script>  timeZone: 'Asia/Shanghai',-->
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/zh-cn.js"></script>
+    <script src="../js/datetimepicker/moment.min.js"></script>
+    <!-- <script src="../js/datetimepicker/moment-timezone.js"></script>  timeZone: 'Asia/Shanghai',-->
+    <script src="../js/datetimepicker/datetimepicker.js"></script>
+    <script src="../js/datetimepicker/zh-cn.js"></script>
 
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/slider/slider.js"></script>
+    <script src="../js/slider/slider.js"></script>
     <script>
-    $(function(){
-        /**
-         * init sideNav
-         * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
-         */
-        $('#sideNav').sideNav({
-            url: BasePath+'json/left_tree.json'
-        });
+        $(function() {
+            /**
+             * init sideNav
+             * json数据模板: ../json/sideNav.json
+             */
+            $('#sideNav').sideNav({
+                url: BasePath + 'json/left_tree.json'
+            });
 
-        /**
-         * datetimepicker setting
-         */
-        $('.startDate').datetimepicker({
-            format: 'YYYY-MM-DD H:mm:ss',
-            // defaultDate: moment().format('YYYY-MM-DD H:59:59'),
-            // sideBySide: true,
-            // debug: true,
-            locale: moment.locale('zh-cn')
-        });
-        $('.endDate').datetimepicker({
-            format: 'YYYY-MM-DD H:mm:ss',
-            // defaultDate: moment().format('YYYY-MM-DD H:mm:ss'),
-            // sideBySide: true,
-            // debug: true,
-            locale: moment.locale('zh-cn')
-        });
-        $('.startDate').on("dp.change", function (e) {
-            var rel = $(this).attr('rel');
-            $('.endDate[rel='+rel+']').data('DateTimePicker').minDate(e.date);
-        });
-        $('.endDate').on("dp.change", function (e) {
-            var rel = $(this).attr('rel');
-            $('.startDate[rel='+rel+']').data('DateTimePicker').maxDate(e.date);
-        });
+            /**
+             * datetimepicker setting
+             */
+            $('.startDate').datetimepicker({
+                format: 'YYYY-MM-DD H:mm:ss',
+                // defaultDate: moment().format('YYYY-MM-DD H:59:59'),
+                // sideBySide: true,
+                // debug: true,
+                locale: moment.locale('zh-cn')
+            });
+            $('.endDate').datetimepicker({
+                format: 'YYYY-MM-DD H:mm:ss',
+                // defaultDate: moment().format('YYYY-MM-DD H:mm:ss'),
+                // sideBySide: true,
+                // debug: true,
+                locale: moment.locale('zh-cn')
+            });
+            $('.startDate').on("dp.change", function(e) {
+                var rel = $(this).attr('rel');
+                $('.endDate[rel=' + rel + ']').data('DateTimePicker').minDate(e.date);
+            });
+            $('.endDate').on("dp.change", function(e) {
+                var rel = $(this).attr('rel');
+                $('.startDate[rel=' + rel + ']').data('DateTimePicker').maxDate(e.date);
+            });
 
-        /**
-         * modal dialog setting
-         */
-        $('#productModal').on('shown.bs.modal', function (event) {
-            // modal already show
-            var modal = $(this);
-        }).on('hidden.bs.modal', function (event) {
-            // modal already close
-            var modal = $(this);
-        });
-        
-        /**
-         * other setting
-         */
+            /**
+             * modal dialog setting
+             */
+            $('#productModal').on('shown.bs.modal', function(event) {
+                // modal already show
+                var modal = $(this);
+            }).on('hidden.bs.modal', function(event) {
+                // modal already close
+                var modal = $(this);
+            });
 
-    });
+            /**
+             * other setting
+             */
+
+        });
     </script>
 
 </body>
+
 </html>

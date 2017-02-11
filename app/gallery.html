@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html class="app no-touch">
+
 <head>
     <meta charset="utf-8" />
     <title>OCP微商城管理系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.extend.css" type="text/css" />
+    <link rel="stylesheet" href="./css/app.css" type="text/css" />
+    <link rel="stylesheet" href="./css/base.css" type="text/css" />
+    <link rel="stylesheet" href="./js/table/bootstrap-table.min.css" type="text/css" />
+    <link rel="stylesheet" href="./js/table/bootstrap-table.extend.css" type="text/css" />
 </head>
 
 <body class="">
@@ -15,7 +16,7 @@
         <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
             <div class="navbar-header aside-md">
                 <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
-                <a href="index.html" class="navbar-brand"> <img src="http://172.17.210.82/ocp/images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
+                <a href="index.html" class="navbar-brand"> <img src="./images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
                 <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user"> <i class="fa fa-cog"></i> </a>
             </div>
             <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
@@ -25,7 +26,7 @@
                         <section class="panel bg-white">
                             <div class="panel-heading b-light bg-light"> <strong>你有<span class="count">2</span> 个新通知</strong> </div>
                             <div class="list-group list-group-alt">
-                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="./images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
                                 <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0版本发布<br> <small class="text-muted">1小时前</small> </span> </a>
                             </div>
                             <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </div>
@@ -33,7 +34,7 @@
                     </section>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="./images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
                     <ul class="dropdown-menu animated fadeInRight">
                         <li> <span class="arrow top"></span> <a href="#">系统设置</a> </li>
                         <li> <a href="#">资料修改</a> </li>
@@ -59,15 +60,15 @@
                                     <div class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             <span class="thumb avatar pull-left m-r">
-                                                <img src="http://172.17.210.82/ocp/images/avatar/a0.png" class="dker" alt="..."> 
+                                                <img src="./images/avatar/a0.png" class="dker" alt="..."> 
                                                 <i class="on md b-black"></i>
                                             </span>
                                             <span class="hidden-nav-xs clear">
                                                 <span class="block m-t-xs">
                                                     <strong class="font-bold text-lt">维森莫</strong>
                                                     <b class="caret"></b>
-                                                </span> 
-                                                <span class="text-muted text-xs block">超级管理员</span>
+                                                </span>
+                                            <span class="text-muted text-xs block">超级管理员</span>
                                             </span>
                                         </a>
                                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -81,9 +82,11 @@
                                             <li> <a href="login.html" data-toggle="ajaxModal">退出</a> </li>
                                         </ul>
                                     </div>
-                                </div><!-- user -->
+                                </div>
+                                <!-- user -->
                                 <nav id="sideNav" class="nav-primary hidden-xs">
-                                </nav><!-- nav -->
+                                </nav>
+                                <!-- nav -->
                             </div>
                         </section>
                         <footer class="footer hidden-xs no-padder dk text-center-nav-xs">
@@ -113,11 +116,12 @@
                                             <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#categoryModal"><i class="fa fa-plus"></i></button>
                                         </header>
                                         <section class="scrollable">
-                                                <div id="categoryTree">
-                                                </div>
+                                            <div id="categoryTree">
+                                            </div>
                                         </section>
                                     </section>
-                                </aside><!-- aside tree -->
+                                </aside>
+                                <!-- aside tree -->
 
                                 <section>
 
@@ -125,13 +129,18 @@
 
                                         <section class="scrollable wrapper">
 
-                                            <div id="galleryTable"></div><!-- gallery table -->
+                                            <div id="galleryTable"></div>
+                                            <!-- gallery table -->
 
-                                        </section><!-- gallery end -->
-                                    </section><!-- hbox -->
-                                </section><!-- hbox -->
+                                        </section>
+                                        <!-- gallery end -->
+                                    </section>
+                                    <!-- hbox -->
+                                </section>
+                                <!-- hbox -->
 
-                            </section><!-- hbox -->
+                            </section>
+                            <!-- hbox -->
                         </section>
                         <!-- side content -->
                     </section>
@@ -139,7 +148,8 @@
                 </section>
             </section>
         </section>
-    </section><!-- vbox -->
+    </section>
+    <!-- vbox -->
 
 
     <!-- category modal animated flipInX-->
@@ -182,136 +192,144 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- modal body -->
+                </div>
+                <!-- modal body -->
                 <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary">确定</button>
                 </div>modal footer -->
-            </div><!-- modal content -->
-        </div><!-- modal dialog -->
-    </div><!-- category modal -->
+            </div>
+            <!-- modal content -->
+        </div>
+        <!-- modal dialog -->
+    </div>
+    <!-- category modal -->
 
     <script>
         // 配置信息一定要放在boot.js上面，
         // 所有js引用和代码放在页面底部
-        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var staticurl = '.';
         var BasePath = './';
     </script>
 
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+    <script src="./js/boot.js"></script>
 
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/template/template-native.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/sortable/jquery.sortable.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.min.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/table/bootstrap-table.extend.js"></script>
+    <script src="./js/template/template-native.js"></script>
+    <script src="./js/sortable/jquery.sortable.js"></script>
+    <script src="./js/table/bootstrap-table.min.js"></script>
+    <script src="./js/table/bootstrap-table.extend.js"></script>
 
     <script>
-    var categoryList = {
-        init: function() {
-            this.initTree();
-        },
-        initTree: function() {
-            var _self = this;
-            /* init tree */
-            $.getJSON(BasePath+'json/brand.json', function (data) {
-                $('#categoryTree').treeview({
-                    data: data,
-                    enableLinks: true,
-                    showTags: true,
-                    expandIcon: 'i i-folder2',
-                    collapseIcon: 'i i-folder-open',
-                    levels: 1, //初始化显示的层级
-                    onNodeSelected: function(event, node){
-                        var params = {'brand':node.text,'node':node.nodeId};
-                        galleryTable.reloadTable(params);
+        var categoryList = {
+            init: function() {
+                this.initTree();
+            },
+            initTree: function() {
+                var _self = this;
+                /* init tree */
+                $.getJSON(BasePath + 'json/brand.json', function(data) {
+                    $('#categoryTree').treeview({
+                        data: data,
+                        enableLinks: true,
+                        showTags: true,
+                        expandIcon: 'i i-folder2',
+                        collapseIcon: 'i i-folder-open',
+                        levels: 1, //初始化显示的层级
+                        onNodeSelected: function(event, node) {
+                            var params = {
+                                'brand': node.text,
+                                'node': node.nodeId
+                            };
+                            galleryTable.reloadTable(params);
+                        }
+                    });
+                });
+            }
+        };
+
+        var galleryTable = {
+            init: function() {
+                this.initTable();
+            },
+            initTable: function() {
+                var _self = this;
+                $table = $("#galleryTable");
+                $table.bootstrapTable({
+                    url: BasePath + 'json/category.php',
+                    showToggle: true,
+                    showTitle: false,
+                    cardColumns: 4,
+                    classes: 'table table-no-bordered table-striped table-gallery',
+                    columns: [{
+                        field: 'state',
+                        checkbox: true,
+                        align: 'center',
+                        valign: 'middle'
+                    }, {
+                        field: 'index',
+                        title: '序列',
+                        width: '10%',
+                        align: 'center',
+                        valign: 'middle'
+                    }, {
+                        field: 'photo',
+                        title: '图片',
+                        width: '30%',
+                        align: 'center',
+                        valign: 'middle',
+                        formatter: function(value, obj, index) {
+                            var src = 'images/photo/' + value + '.jpg';
+                            return '<img src=' + src + ' />';
+                        }
+                    }, {
+                        field: 'cateName',
+                        title: '品牌名',
+                        width: '30%',
+                        align: 'center',
+                        valign: 'middle'
+                    }, {
+                        field: 'level',
+                        title: '分类号',
+                        width: '30%',
+                        align: 'center',
+                        valign: 'middle'
+                    }],
+                    responseHandler: function(res) {
+                        return _self.addIndex(res);
                     }
                 });
-            });
+            },
+            addIndex: function(data) {
+                $.each(data, function(i, obj) {
+                    obj.index = i;
+                    obj.photo = 'p' + i % 8;
+                });
+                return data;
+            },
+            reloadTable: function(params) {
+                var _self = this;
+                $.getJSON(BasePath + 'json/category.php', params, function(data) {
+                    $("#galleryTable").bootstrapTable('load', _self.addIndex(data));
+                });
+            }
         }
-    };
-
-    var galleryTable = {
-        init: function() {
-            this.initTable();
-        },
-        initTable: function() {
-            var _self = this;
-            $table = $("#galleryTable");
-            $table.bootstrapTable({
-                url: BasePath+'json/category.php',
-                showToggle: true,
-                showTitle: false,
-                cardColumns: 4,
-                classes: 'table table-no-bordered table-striped table-gallery',
-                columns: [{
-                    field: 'state',
-                    checkbox: true,
-                    align: 'center',
-                    valign: 'middle'
-                }, {
-                    field: 'index',
-                    title: '序列',
-                    width: '10%',
-                    align: 'center',
-                    valign: 'middle'
-                }, {
-                    field: 'photo',
-                    title: '图片',
-                    width: '30%',
-                    align: 'center',
-                    valign: 'middle',
-                    formatter: function (value, obj, index) {
-                        var src = 'images/photo/'+value+'.jpg';
-                        return '<img src='+src+' />';
-                    }
-                }, {
-                    field: 'cateName',
-                    title: '品牌名',
-                    width: '30%',
-                    align: 'center',
-                    valign: 'middle'
-                }, {
-                    field: 'level',
-                    title: '分类号',
-                    width: '30%',
-                    align: 'center',
-                    valign: 'middle'
-                }],
-                responseHandler: function(res) {
-                    return _self.addIndex(res);
-                }
-            });
-        },
-        addIndex: function(data) {
-            $.each(data, function(i, obj) {
-                obj.index = i;
-                obj.photo = 'p'+i%8;
-            });
-            return data;
-        },
-        reloadTable: function(params) {
-            var _self = this;
-            $.getJSON(BasePath+'json/category.php', params, function(data) {
-                $("#galleryTable").bootstrapTable('load', _self.addIndex(data));
-            });
-        }
-    }
 
 
-    $(function(){
-        /**
-         * init sideNav
-         * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
-         */
-        $('#sideNav').sideNav({
-            url: BasePath+'json/left_tree.json'
+        $(function() {
+            /**
+             * init sideNav
+             * json数据模板: ./json/sideNav.json
+             */
+            $('#sideNav').sideNav({
+                url: BasePath + 'json/left_tree.json'
+            });
+            /* init category */
+            categoryList.init();
+            /* init gallery */
+            galleryTable.init();
         });
-        /* init category */
-        categoryList.init();
-        /* init gallery */
-        galleryTable.init();
-    });
     </script>
 
 </body>
+
 </html>

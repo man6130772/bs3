@@ -13,7 +13,7 @@
         "id": 21,
         "text": "控制台首页",
         "icon": "i i-home"
-    },{
+    }, {
         "parentId": 2,
         "state": "open",
         "attributes": {},
@@ -138,7 +138,7 @@
                 "attributes": {},
                 "id": 999,
                 "text": "ZJ自建测试",
-                "children":[{
+                "children": [{
                     "state": "open",
                     "attributes": {
                         "url": "test/gh/modules.html"
@@ -153,7 +153,7 @@
                     "id": 99999,
                     "text": "ZJ自建测试2"
                 }]
-            },{
+            }, {
                 "state": "open",
                 "attributes": {
                     "url": "list.html"
@@ -727,7 +727,7 @@
         "text": "框架可用组件",
         "icon": "i i-layer",
         "attributes": {
-            "url": "http://172.17.210.82/bootstrap-template/components.html"
+            "url": "../template/components.html"
         }
     }, {
         "parentId": 1,
@@ -736,7 +736,7 @@
         "text": "框架使用文档",
         "icon": "i i-book",
         "attributes": {
-            "url": "http://172.17.210.82/ocp/api/"
+            "url": "../api/index.html"
         }
     }]
 }]

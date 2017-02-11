@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html class="app no-touch">
+
 <head>
     <meta charset="utf-8" />
     <title>OCP微商城管理系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/app.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/css/base.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://s.belle.net.cn/bs3/1.0.1/js/slider/slider.css" type="text/css" />
+    <link rel="stylesheet" href="./css/app.css" type="text/css" />
+    <link rel="stylesheet" href="./css/base.css" type="text/css" />
+    <link rel="stylesheet" href="./js/datetimepicker/datetimepicker.min.css" type="text/css" />
+    <link rel="stylesheet" href="./js/slider/slider.css" type="text/css" />
 </head>
 
 <body class="">
@@ -15,7 +16,7 @@
         <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
             <div class="navbar-header aside-md">
                 <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
-                <a href="index.html" class="navbar-brand"> <img src="http://172.17.210.82/ocp/images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
+                <a href="index.html" class="navbar-brand"> <img src="./images/common/logo.png" class="m-r-sm" alt="scale"> <span class="hidden-nav-xs">OCP</span> </a>
                 <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user"> <i class="fa fa-cog"></i> </a>
             </div>
             <!-- <ul class="nav navbar-nav hidden-xs">
@@ -32,7 +33,7 @@
                         <section class="panel bg-white">
                             <div class="panel-heading b-light bg-light"> <strong>你有<span class="count">2</span> 个新通知</strong> </div>
                             <div class="list-group list-group-alt">
-                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
+                                <a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="./images/avatar/a0.png" alt="..." class="img-circle"> </span> <span class="media-body block m-b-none"> 使用bootstrap框架<br> <small class="text-muted">10分钟前</small> </span> </a>
                                 <a href="#" class="media list-group-item"> <span class="media-body block m-b-none"> 1.0版本发布<br> <small class="text-muted">1小时前</small> </span> </a>
                             </div>
                             <div class="panel-footer text-sm"> <a href="#" class="pull-right"><i class="fa fa-cog"></i></a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </div>
@@ -40,7 +41,7 @@
                     </section>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="http://172.17.210.82/ocp/images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="./images/avatar/a0.png" alt="..."> </span> 维森莫 <b class="caret"></b> </a>
                     <ul class="dropdown-menu animated fadeInRight">
                         <li> <span class="arrow top"></span> <a href="#">系统设置</a> </li>
                         <li> <a href="#">资料修改</a> </li>
@@ -66,15 +67,15 @@
                                     <div class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             <span class="thumb avatar pull-left m-r">
-                                                <img src="http://172.17.210.82/ocp/images/avatar/a0.png" class="dker" alt="..."> 
+                                                <img src="./images/avatar/a0.png" class="dker" alt="..."> 
                                                 <i class="on md b-black"></i>
                                             </span>
                                             <span class="hidden-nav-xs clear">
                                                 <span class="block m-t-xs">
                                                     <strong class="font-bold text-lt">维森莫</strong>
                                                     <b class="caret"></b>
-                                                </span> 
-                                                <span class="text-muted text-xs block">超级管理员</span>
+                                                </span>
+                                            <span class="text-muted text-xs block">超级管理员</span>
                                             </span>
                                         </a>
                                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -88,9 +89,11 @@
                                             <li> <a href="modal.lockme.html" data-toggle="ajaxModal">退出</a> </li>
                                         </ul>
                                     </div>
-                                </div><!-- user -->
+                                </div>
+                                <!-- user -->
                                 <nav id="sideNav" class="nav-primary hidden-xs">
-                                </nav><!-- nav -->
+                                </nav>
+                                <!-- nav -->
                             </div>
                         </section>
                         <footer class="footer hidden-xs no-padder dk text-center-nav-xs">
@@ -118,15 +121,17 @@
                                 <div class="panel-body">
                                     <form class="form-horizontal">
 
-                                            <div class="row">
+                                        <div class="row">
 
-                                                <div class="col-sm-6">
-                                                </div><!-- col -->
-
-                                                <div class="col-sm-6">
-                                                </div><!-- col -->
-
+                                            <div class="col-sm-6">
                                             </div>
+                                            <!-- col -->
+
+                                            <div class="col-sm-6">
+                                            </div>
+                                            <!-- col -->
+
+                                        </div>
 
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label">商品名称</label>
@@ -173,12 +178,12 @@
                                         </div>
 
                                         <div class="line line-dashed b-b line-lg pull-in"></div>
-                                        
+
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label">图片修改</label>
                                             <div class="col-sm-4">
                                                 <div class="img-full pos-rlt">
-                                                    <img src="http://172.17.210.82/ocp/images/photo/p1.jpg" />
+                                                    <img src="./images/photo/p1.jpg" />
                                                 </div>
                                                 <input type="file" class="filestyle" data-icon="false" data-classbutton="btn btn-default" data-classinput="form-control inline v-middle input-s" id="filestyle-2" style="position: fixed; left: -500px;">
                                                 <label for="filestyle-2" class="btn btn-default btn-block no-radius"><i class="fa fa-cloud-upload text"></i> <span>修改图片</span></label>
@@ -188,7 +193,7 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-4 control-label">说明</label>
                                                     <div class="col-sm-8 m-b">
-                                                        <textarea rows="3" class="form-control" id="t_remark" name="remark"></textarea> 
+                                                        <textarea rows="3" class="form-control" id="t_remark" name="remark"></textarea>
                                                     </div>
                                                 </div>
 
@@ -209,7 +214,7 @@
                                         </div>
 
                                         <div class="line line-dashed b-b line-lg pull-in"></div>
-                                        
+
                                         <!-- <div class="form-group">
                                             <label class="col-sm-3 control-label">详情</label>
                                             <div class="col-sm-7">
@@ -245,7 +250,7 @@
                                                             <th data-field="createUser">品牌名称</th>
                                                             <th data-field="createUser">品牌分类</th>
                                                             <th data-field="createUser">是否显示</th>
-                                                            <th data-formatter="cms_product_list_edit.operateFormatter" data-events="cms_product_list_edit.operateEvents">操作</th>   
+                                                            <th data-formatter="cms_product_list_edit.operateFormatter" data-events="cms_product_list_edit.operateEvents">操作</th>
                                                         </tr>
                                                     </thead>
                                                 </table>
@@ -253,11 +258,11 @@
                                         </div>
 
                                         <div class="line line-dashed b-b line-lg pull-in"></div>
-                                        
+
                                         <div class="text-center">
                                             <button type="button" class="btn btn-primary">保存</button>
                                         </div>
-                                        
+
                                     </form>
                                 </div>
 
@@ -282,66 +287,72 @@
                 </div>
                 <div class="modal-body scrollable" style="max-height:350px;">
                     <div id="brandTree"></div>
-                </div><!-- modal body -->
+                </div>
+                <!-- modal body -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary">确定</button>
-                </div><!-- modal footer -->
-            </div><!-- modal content -->
-        </div><!-- modal dialog -->
-    </div><!-- tree modal -->
+                </div>
+                <!-- modal footer -->
+            </div>
+            <!-- modal content -->
+        </div>
+        <!-- modal dialog -->
+    </div>
+    <!-- tree modal -->
 
     <script>
         // 配置信息一定要放在boot.js上面，
         // 所有js引用和代码放在页面底部
-        var staticurl = 'http://s.belle.net.cn/bs3/1.0.1';
+        var staticurl = '.';
         var BasePath = './';
     </script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/boot.js"></script>
+    <script src="./js/boot.js"></script>
     <script>
         /**
          * init sideNav
-         * json数据模板: http://172.17.210.82/ocp/json/sideNav.json
+         * json数据模板: ./json/sideNav.json
          */
         $('#sideNav').sideNav({
-            url: BasePath+'json/left_tree.json'
+            url: BasePath + 'json/left_tree.json'
         });
     </script>
 
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/ueditor/ueditor.config.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/ueditor/ueditor.all.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="./js/ueditor/ueditor.config.js"></script>
+    <script src="./js/ueditor/ueditor.all.js"></script>
+    <script src="./js/ueditor/lang/zh-cn/zh-cn.js"></script>
 
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/moment.min.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/datetimepicker.js"></script>
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/datetimepicker/zh-cn.js"></script>
-    
-    <script src="http://s.belle.net.cn/bs3/1.0.1/js/table/table-insert.js"></script>
+    <script src="./js/datetimepicker/moment.min.js"></script>
+    <script src="./js/datetimepicker/datetimepicker.js"></script>
+    <script src="./js/datetimepicker/zh-cn.js"></script>
+
+    <script src="./js/table/table-insert.js"></script>
 
     <script>
-    $(function(){
-        /**
-         * ueeditor setting
-         */
-        window.ue = UE.getEditor('editor');
+        $(function() {
+            /**
+             * ueeditor setting
+             */
+            window.ue = UE.getEditor('editor');
 
-        /**
-         * datetimepicker setting
-         */
-        $('#datetimepicker1').datetimepicker({
-            format: 'YYYY-MM-DD',
-            locale: moment.locale('zh-cn'),
-            // debug: true,
-        });
-        $('#datetimepicker2').datetimepicker({
-            format: 'YYYY-MM-DD H:mm:ss',
-            locale: moment.locale('zh-cn'),
-            // debug: true,
-            sideBySide: true
-        });
+            /**
+             * datetimepicker setting
+             */
+            $('#datetimepicker1').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: moment.locale('zh-cn'),
+                // debug: true,
+            });
+            $('#datetimepicker2').datetimepicker({
+                format: 'YYYY-MM-DD H:mm:ss',
+                locale: moment.locale('zh-cn'),
+                // debug: true,
+                sideBySide: true
+            });
 
-    });
+        });
     </script>
 
 </body>
+
 </html>
